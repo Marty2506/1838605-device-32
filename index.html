@@ -13,7 +13,7 @@
       <div class="page-header-toolbar"> <!-- section, div или ol? -->
         <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-          <input type="submit" value="Найти" class="visually-hidden">
+          <button class="visually-hidden" type="submit">Найти</button>
         </form>
         <a class="toolbar-link" href="#">
           <!-- <svg width="13" height="12" fill="none" xmlns="#" ></svg> не уверен на счет svg-->
@@ -23,7 +23,7 @@
           <span class="toolbar-link-text">Сравнить</span>
         </a>
         <a class="toolbar-link" href="#">
-          <span class="toolbar-bucket-product-cnt">Кол-во товаров в корзине</span> <!-- Верно будет написать так? или сразу двойку сюда?-->
+          <span class="toolbar-bucket-product-cnt">2</span>
           <span class="toolbar-link-text">Корзина</span>
         </a>
       </div>
@@ -129,13 +129,13 @@
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="service-list">
           <li class="service-list-item service-list-item-current">
-            <span>Доставка</span>
+            <button class="service-button" type="button">Доставка</button>
           </li>
-          <li class="service-list-item service-list-item-current">
-            <span>Гарантия</span>
+          <li class="service-list-item">
+            <button class="service-button" type="button">Гарантия</button>
           </li>
-          <li class="service-list-item service-list-item-current">
-            <span>Кредит</span>
+          <li class="service-list-item">
+            <button class="service-button" type="button">Кредит</button>
           </li>
         </ul>
 
@@ -224,7 +224,7 @@
           <h2 class="visually-hidden">Контакты</h2>
           <address class="footer-contacts-address">
             <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-            <p class="footer-contacts-phone">+7 (812) 812-12-12</p> <!-- Удобно ли будет верстать, если телефон будет в этой секции?-->
+            <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
         </section>
 
