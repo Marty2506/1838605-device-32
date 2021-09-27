@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header-logo" href="index.html">
+        <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+      </a>
+
+      <div class="page-header-toolbar"> <!-- section, div или ol? -->
+        <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <button class="visually-hidden" type="submit">Найти</button>
+        </form>
+        <a class="toolbar-link" href="#">
+          <span class="toolbar-link-text">Коля Петухов</span>
+        </a>
+        <a class="toolbar-link" href="#">
+          <span class="toolbar-link-text">Выйти</span>
+        </a>
+        <a class="toolbar-link" href="#">
+          <span class="toolbar-link-text">Сравнить</span>
+        </a>
+        <a class="toolbar-link" href="#">
+          <span class="toolbar-bucket-product-cnt">2</span>
+          <span class="toolbar-link-text">Корзина</span>
+        </a>
+      </div>
+
+      <nav class="page-header-navigation">
+        <ul class="page-header-navigation-list">
+          <li class="page-header-navigation-item">
+            <a class="page-header-navigation-link" href="catalog.html">Каталог товаров</a>
+            <button class="catalog-more-button" type="button">
+              <span>+</span>
+            </button>
+          </li>
+          <li class="page-header-navigation-item">
+            <a class="page-header-navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="page-header-navigation-item">
+            <a class="page-header-navigation-link" href="#">Гарантия</a>
+          </li>
+          <li class="page-header-navigation-item">
+            <a class="page-header-navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-inner">
+      <!-- <h1 class="visually-hidden">Каталог товаров интернет-магазина «Девайс»</h1> -->
+      <!-- По факту это же уже страница catalog/selfie-monopods-->
+      <h1 class="main-inner-title">Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Моноподы для селфи</a>
+        </li>
+      </ul>
+
+      <section class="product-catalog">
+        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+        <h3 class="main-inner-subtitle">Фильтр</h3> <!-- Двоеточие сразу в заголовок или через ::after? Нужен ли вообще этот заголовок?-->
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" oninput="price-from.value=min-price.value">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость</legend>
+            <!-- Мне не нравится выбор цены через кнопки как делали на лайве
+                 Посмотрел как сделано на озоне. Там через 2 ренджа
+                 Как правильнее? -->
+            <!-- <input class="price-range-left" type="range" step="any" min="0" max="10000" id="min-price" name="min-price">
+            <input class="price-range-right" type="range" step="any" min="0" max="10000" id="max-price" name="max-price"> -->
+            <button class="range-toggle toggle-min" type="button">
+              <span class="visually-hidden">Изменить минимальную цену.</span>
+            </button>
+            <button class="range-toggle toggle-max" type="button">
+              <span class="visually-hidden">Изменить максимальную цену.</span>
+            </button>
+            <label class="catalog-filter-label">
+              от <input class="catalog-filter-input" type="number" name="price-from" value="0">
+            </label>
+            <label class="catalog-filter-label">
+              до <input class="catalog-filter-input" type="number" name="price-to" value="5000">
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Цвет</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="black-color" checked> <!-- В демке класс visually-hidden. Почему?-->
+                  <span class="product-color-check-mark"></span>
+                  <span class="product-color-label">Черный</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="white-color" checked>
+                  <span class="product-color-check-mark"></span>
+                  <span class="product-color-label">Белый</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="blue-color">
+                  <span class="product-color-check-mark"></span>
+                  <span class="product-color-label">Синий</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="red-color">
+                  <span class="product-color-check-mark"></span>
+                  <span class="product-color-label">Красный</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="pink-color">
+                  <span class="product-color-check-mark"></span>
+                  <span class="product-color-label">Розовый</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Bluetooth</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="bluetooth-existence" value="bluetooth-yes" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Есть</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="bluetooth-existence" value="bluetooth-no">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Нет</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button class="button" type="submit">Показать</button>
+        </form>
+
+        <h3 class="main-inner-subtitle">Сортировка</h3> <!-- Двоеточие сразу в заголовок или через ::after?-->
+        <form class="sorting-type">
+          <label class="visually-hidden" for="sorting">Сортировка</label>
+          <select class="select-control" id="sorting" name="sorting">
+            <option value="popular">Сначала популярное</option>
+            <option value="cheap">Сначала дешёвое</option>
+            <option value="expensive">Сначала дорогое</option>
+          </select>
+          <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+        </form>
+
+        <!-- Не понимаю смысл этих кнопок. Если меняет порядок сортировки, то противоречит выбранному "Сначала популярные" -->
+        <button class="button-sort" type="button" disabled>
+          <span class="visually-hidden">Обратная сортировка</span>
+        </button>
+        <button class="button-sort" type="button">
+          <span class="visually-hidden">Прямая сортировка</span>
+        </button>
+
+        <ul class="product-list">
+          <li class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="">
+              <span class="new-product visually-hidden">New</span>
+              <h4 class="product-card-title">Любительска селфи-палка</h4>
+              <button class="button" type="button">Подробнее</button> <!-- Я так понимаю должна появляться только при наведении на картинку-->
+            </a>
+            <b class="product-card-price">500 ₽</b>
+          </li>
+          <li class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="">
+              <span class="new-product visually-hidden">New</span>
+              <h4 class="product-card-title">Профессиональная селфи-палка </h4>
+              <button class="button visually-hidden" type="button">Подробнее</button>
+            </a>
+            <b class="product-card-price">1500 ₽</b>
+          </li>
+          <li class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="">
+              <span class="new-product visually-hidden">New</span>
+              <h4 class="product-card-title">Непотопляемаяселфи-палка</h4>
+              <button class="button visually-hidden" type="button">Подробнее</button>
+            </a>
+            <b class="product-card-price">2500 ₽</b>
+          </li>
+          <li class="product-card">
+            <a class="product-card-link" href="#">
+              <img class="product-card-image" src="" alt="">
+              <span class="new-product">New</span> <!-- Через что лучше этот значек сделать?-->
+              <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
+              <button class="button visually-hidden" type="button">Подробнее</button>
+            </a>
+            <b class="product-card-price">4900 ₽</b>
+          </li>
+        </ul>
+        <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-prev" href="#"> <!-- в демке ссылка остутствует-->
+              <span class="visually-hidden">Назад</span>
+            </a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">1</a> <!-- в демке ссылка остутствует-->
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">15</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-next" href="#">
+              <span class="visually-hidden">Вперед</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <address class="footer-contacts-address">
+          <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </address>
+      </section>
+
+      <nav class="footer-navigation">
+        <ul class="footer-navigation-list">
+          <li class="footer-navigation-item">
+            <a class="footer-navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a class="footer-navigation-link" href="#">Гарантия</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a class="footer-navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="footer-social">
+        <h2 class="visually-hidden">Соцсети</h2>
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="button-social" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фэйсбук</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="button-social" href="https://www.instagram.com/htmlacademy/">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="button-social" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <a class="footer-html-academy-link" href="https://htmlacademy.ru/">
+        <img src="" alt="Логотип html-academy"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+      </a>
+    </footer>
+  </body>
+</html>
