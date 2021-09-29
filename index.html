@@ -51,36 +51,78 @@
 
     <main class="main-index">
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
+      <!-- Кнопки прокрутки слайдов -->
       <section class="pop-product-slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <!-- Я не знаю заворачивать ли эту карточку в список и делать активынм только 1 элемент, а остальные скрывать
-          Мне кажется это неверным. Надо, чтобы это карточка откуда-то грузилась.
-          Но есть мнение, что в этом курсе приедтся делать именно со списком.
-          Добавил пока сюда только одну карточку из-за выше описанного.
-        -->
-        <h3 class="visually-hidden">Квадрокоптер</h3>
-        <span class="pop-product-slider-num">01</span>
-        <img class="pop-product-image" src="" alt="">
         <button class="pop-product-slider-button slider-prev" type="button">
           <span class="visually-hidden">Предыдущий товар</span>
         </button>
         <button class="pop-product-slider-button slider-next" type="button">
           <span class="visually-hidden">Слудющий товар</span>
         </button>
-        <b class="pop-product-slider-slogan">
-          Порхает как бабочка, жалит как пчела!
-        </b>
-        <p class="pop-product-slider-description">
-          Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-        </p>
-        <dl class="pop-product-feature-list">
-          <dt class="pop-product-feature-item">Дальность полета</dt>
-          <dd class="pop-product-feature-value">800 м</dd>
+        <ul class="pop-product-list">
+          <!-- 1ый слайд -->
+          <li class="pop-product-item">
+            <h3 class="visually-hidden">Квадрокоптер</h3>
+            <span class="pop-product-slider-num">01</span>
+            <img class="pop-product-image" src="" alt="">
+            <b class="pop-product-slider-slogan">
+              Порхает как бабочка, жалит как пчела!
+            </b>
+            <p class="pop-product-slider-description">
+              Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+            </p>
+            <dl class="pop-product-feature-list">
+              <dt class="pop-product-feature-item">Дальность полета</dt>
+              <dd class="pop-product-feature-value">800 м</dd>
 
-          <dt class="pop-product-feature-item">Радиус поражения</dt>
-          <dd class="pop-product-feature-value">50 м</dd>
-        </dl>
-        <a class="button-link" href="#">Подробнее</a>
+              <dt class="pop-product-feature-item">Радиус поражения</dt>
+              <dd class="pop-product-feature-value">50 м</dd>
+            </dl>
+            <a class="button-link" href="#">Подробнее</a>
+          </li>
+          <!-- 2ой слайд -->
+          <li class="pop-product-item visually-hidden">
+            <h3 class="visually-hidden">Фитнес-браслет</h3>
+            <span class="pop-product-slider-num">02</span>
+            <img class="pop-product-image" src="" alt="">
+            <b class="pop-product-slider-slogan">
+              Худеем правильно!
+            </b>
+            <p class="pop-product-slider-description">
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+            </p>
+            <dl class="pop-product-feature-list">
+              <dt class="pop-product-feature-item">Без подзярядки</dt>
+              <dd class="pop-product-feature-value">48 часов</dd>
+            </dl>
+            <a class="button-link" href="#">Подробнее</a>
+          </li>
+          <!-- 3ий слайд слайд -->
+          <li class="pop-product-item visually-hidden">
+            <h3 class="visually-hidden">Селфи-палка</h3>
+            <span class="pop-product-slider-num">03</span>
+            <img class="pop-product-image" src="" alt="">
+            <b class="pop-product-slider-slogan">
+              Делай селфи, как Бен Стиллер!
+            </b>
+            <p class="pop-product-slider-description">
+              Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+            </p>
+            <dl class="pop-product-feature-list">
+              <dt class="pop-product-feature-item">Длина палки</dt>
+              <dd class="pop-product-feature-value">8,5 м</dd>
+
+              <dt class="pop-product-feature-item">Вес палки</dt>
+              <dd class="pop-product-feature-value">5 кг</dd>
+
+              <dt class="pop-product-feature-item">Материал</dt>
+              <dd class="pop-product-feature-value">Карбон</dd>
+            </dl>
+            <a class="button-link" href="#">Подробнее</a>
+          </li>
+        </ul>
+
         <ol class="pop-product-slider-pagination">
           <li class="pop-product-slider-pagination-item">
             <button class="pop-product-slider-pagination-button pop-product-slider-pagination-button-current" type="button">
@@ -165,7 +207,9 @@
       <div class="delivery-offer">
         <!-- Картинку с векторной графикой не знаю как добавить, мб через css -->
         <b>Доставим редкий товар под заказ</b>
-        <button class="delivery-offer-info-button" type="button">Подробнее</button> <!-- Подробнее или i? Можно поменять через css?-->
+        <a class="delivery-offer-info-button" href="#">
+          <span>i</span>
+        </a>
       </div>
 
       <section class="about">

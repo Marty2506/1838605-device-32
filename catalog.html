@@ -10,7 +10,7 @@
         <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
       </a>
 
-      <div class="page-header-toolbar"> <!-- section, div или ol? -->
+      <div class="page-header-toolbar">
         <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <input type="search" name="search" id="search" placeholder="Поиск по сайту">
           <button class="visually-hidden" type="submit">Найти</button>
@@ -52,8 +52,6 @@
     </header>
 
     <main class="main-inner">
-      <!-- <h1 class="visually-hidden">Каталог товаров интернет-магазина «Девайс»</h1> -->
-      <!-- По факту это же уже страница catalog/selfie-monopods-->
       <h1 class="main-inner-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
@@ -69,15 +67,11 @@
 
       <section class="product-catalog">
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-        <h3 class="main-inner-subtitle">Фильтр</h3> <!-- Двоеточие сразу в заголовок или через ::after? Нужен ли вообще этот заголовок?-->
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" oninput="price-from.value=min-price.value">
+        <h3 class="main-inner-subtitle">Фильтр:</h3>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
-            <!-- Мне не нравится выбор цены через кнопки как делали на лайве
-                 Посмотрел как сделано на озоне. Там через 2 ренджа
-                 Как правильнее? -->
-            <!-- <input class="price-range-left" type="range" step="any" min="0" max="10000" id="min-price" name="min-price">
-            <input class="price-range-right" type="range" step="any" min="0" max="10000" id="max-price" name="max-price"> -->
+            <!-- TODO: подумать на rangeреализацией -->
             <button class="range-toggle toggle-min" type="button">
               <span class="visually-hidden">Изменить минимальную цену.</span>
             </button>
@@ -156,7 +150,7 @@
           <button class="button" type="submit">Показать</button>
         </form>
 
-        <h3 class="main-inner-subtitle">Сортировка</h3> <!-- Двоеточие сразу в заголовок или через ::after?-->
+        <h3 class="main-inner-subtitle">Сортировка:</h3>
         <form class="sorting-type">
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
@@ -168,27 +162,25 @@
         </form>
 
         <!-- Не понимаю смысл этих кнопок. Если меняет порядок сортировки, то противоречит выбранному "Сначала популярные" -->
-        <button class="button-sort" type="button" disabled>
+        <a class="button-sort" href="#" disabled>
           <span class="visually-hidden">Обратная сортировка</span>
-        </button>
-        <button class="button-sort" type="button">
+        </a>
+        <a class="button-sort" href="#" disabled>
           <span class="visually-hidden">Прямая сортировка</span>
-        </button>
+        </a>
 
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="">
-              <span class="new-product visually-hidden">New</span>
               <h4 class="product-card-title">Любительска селфи-палка</h4>
-              <span class="about-span">Подробнее</span> <!-- Я так понимаю должна появляться только при наведении на картинку-->
+              <span class="about-span">Подробнее</span> <!-- Появляется при наведении на картинку-->
             </a>
             <b class="product-card-price">500 ₽</b>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="">
-              <span class="new-product visually-hidden">New</span>
               <h4 class="product-card-title">Профессиональная селфи-палка </h4>
               <span class="about-span visually-hidden">Подробнее</span>
             </a>
@@ -197,16 +189,14 @@
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="" alt="">
-              <span class="new-product visually-hidden">New</span>
               <h4 class="product-card-title">Непотопляемаяселфи-палка</h4>
               <span class="about-span visually-hidden">Подробнее</span>
             </a>
             <b class="product-card-price">2500 ₽</b>
           </li>
           <li class="product-card">
-            <a class="product-card-link" href="#">
+            <a class="product-card-link new-product-mark" href="#">
               <img class="product-card-image" src="" alt="">
-              <span class="new-product">New</span> <!-- Через что лучше этот значек сделать?-->
               <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
               <span class="about-span visually-hidden">Подробнее</span>
             </a>
