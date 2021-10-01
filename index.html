@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин «Девайс»</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header-logo" href="index.html">
-        <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+        <img src="img/device-logo.svg" alt="Логотип Интернет-магазина «Девайс»" width="145" height="36">
       </a>
 
-      <div class="page-header-toolbar"> <!-- section, div или ol? -->
+      <div class="page-header-toolbar">
         <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <input type="search" name="search" id="search" placeholder="Поиск по сайту">
           <button class="visually-hidden" type="submit">Найти</button>
         </form>
         <a class="toolbar-link" href="#">
-          <!-- <svg width="13" height="12" fill="none" xmlns="#" ></svg> не уверен на счет svg-->
           <span class="toolbar-link-text">Войти</span>
         </a>
         <a class="toolbar-link" href="#">
@@ -65,7 +65,7 @@
           <li class="pop-product-item">
             <h3 class="visually-hidden">Квадрокоптер</h3>
             <span class="pop-product-slider-num">01</span>
-            <img class="pop-product-image" src="" alt="">
+            <img class="pop-product-image" src="img/pop-product-copter.jpg" alt="" width="560" height="560">
             <b class="pop-product-slider-slogan">
               Порхает как бабочка, жалит как пчела!
             </b>
@@ -85,7 +85,7 @@
           <li class="pop-product-item visually-hidden">
             <h3 class="visually-hidden">Фитнес-браслет</h3>
             <span class="pop-product-slider-num">02</span>
-            <img class="pop-product-image" src="" alt="">
+            <img class="pop-product-image" src="img/pop-product-tracker.jpg" alt="" width="560" height="560">
             <b class="pop-product-slider-slogan">
               Худеем правильно!
             </b>
@@ -102,7 +102,7 @@
           <li class="pop-product-item visually-hidden">
             <h3 class="visually-hidden">Селфи-палка</h3>
             <span class="pop-product-slider-num">03</span>
-            <img class="pop-product-image" src="" alt="">
+            <img class="pop-product-image" src="img/pop-product-selfie.jpg" alt="" width="560" height="560">
             <b class="pop-product-slider-slogan">
               Делай селфи, как Бен Стиллер!
             </b>
@@ -146,6 +146,7 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="product-category-list">
           <li class="product-category-item">
+            <!-- Как удобнее и правильнее сюда картинки вставить? Через ::before? или прям сюда svg инлайном вставить? -->
             <a class="product-category-link" href="#">Виртуальная реальность</a>
           </li>
           <li class="product-category-item">
@@ -263,7 +264,7 @@
       </section>
 
       <footer class="page-footer">
-        <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+        <img src="img/device-logo.svg" alt="Логотип Интернет-магазина «Девайс»" width="145" height="36"> <!-- не знаю как изменить цвет, не загружая новую картинку-->
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <address class="footer-contacts-address">
@@ -308,7 +309,7 @@
         </section>
 
         <a class="footer-html-academy-link" href="https://htmlacademy.ru/">
-          <img src="" alt="Логотип html-academy"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+          <img src="img/icons/htmlacademy-logo.svg" alt="Логотип html-academy" width="115" height="34"> <!-- не знаю как изменить цвет, не загружая новую картинку-->
         </a>
       </footer>
     </main>

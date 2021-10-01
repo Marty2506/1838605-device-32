@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header-logo" href="index.html">
-        <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+        <img src="img/device-logo.svg" alt="Логотип Интернет-магазина «Девайс»" width="145" height="36">
       </a>
 
       <div class="page-header-toolbar">
@@ -71,7 +72,7 @@
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость</legend>
-            <!-- TODO: подумать на rangeреализацией -->
+            <!-- TODO: подумать на range реализацией -->
             <button class="range-toggle toggle-min" type="button">
               <span class="visually-hidden">Изменить минимальную цену.</span>
             </button>
@@ -91,7 +92,7 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="black-color" checked> <!-- В демке класс visually-hidden. Почему?-->
+                  <input class="visually-hidden control-input" type="checkbox" name="black-color" checked>
                   <span class="product-color-check-mark"></span>
                   <span class="product-color-label">Черный</span>
                 </label>
@@ -172,15 +173,15 @@
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
-              <h4 class="product-card-title">Любительска селфи-палка</h4>
+              <img class="product-card-image" src="img/catalog/product-1.jpg" alt="" width="360" height="380">
+              <h4 class="product-card-title">Любительская селфи-палка</h4>
               <span class="about-span">Подробнее</span> <!-- Появляется при наведении на картинку-->
             </a>
             <b class="product-card-price">500 ₽</b>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="img/catalog/product-2.jpg" alt="" width="360" height="380">
               <h4 class="product-card-title">Профессиональная селфи-палка </h4>
               <span class="about-span visually-hidden">Подробнее</span>
             </a>
@@ -188,15 +189,15 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
-              <h4 class="product-card-title">Непотопляемаяселфи-палка</h4>
+              <img class="product-card-image" src="img/catalog/product-3.jpg" alt="" width="360" height="380">
+              <h4 class="product-card-title">Непотопляемая селфи-палка</h4>
               <span class="about-span visually-hidden">Подробнее</span>
             </a>
             <b class="product-card-price">2500 ₽</b>
           </li>
           <li class="product-card">
             <a class="product-card-link new-product-mark" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="img/catalog/product-4.jpg" alt="" width="360" height="380">
               <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
               <span class="about-span visually-hidden">Подробнее</span>
             </a>
@@ -235,7 +236,7 @@
     </main>
 
     <footer class="page-footer">
-      <img src="" alt="Логотип Интернет-магазина «Девайс»"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+      <img src="img/device-logo.svg" alt="Логотип Интернет-магазина «Девайс»" width="145" height="36"> <!-- не знаю как изменить цвет, не загружая новую картинку-->
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <address class="footer-contacts-address">
@@ -280,7 +281,7 @@
       </section>
 
       <a class="footer-html-academy-link" href="https://htmlacademy.ru/">
-        <img src="" alt="Логотип html-academy"> <!-- Сделан векторной графикой, но пока картинкой как заглушка -->
+        <img src="img/icons/htmlacademy-logo.svg" alt="Логотип html-academy" width="115" height="34"> <!-- не знаю как изменить цвет, не загружая новую картинку-->
       </a>
     </footer>
   </body>
