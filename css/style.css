@@ -2,15 +2,15 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("/fonts/raleway/raleway-800.woff2") format("woff2");
-  /* font-display: swap; */
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -26,32 +26,104 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src: url("/fonts/rubik/rubik-800.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
   font-display: swap;
 }
 
 body{
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
 }
 
+.page-header{
+  background-color: #FFE17F;
+}
+
+.search-form input {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.toolbar-link {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+}
+.toolbar-bucket-product-cnt {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  background-color: white;
+}
+
+.page-header-navigation-list {
+ list-style-type: none;
+}
+
+.page-header-navigation-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pop-product-item {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+.pop-product-slider-num{
+  font-weight: 800;
+  font-size: 180px;
+  line-height: 30px;
+  color: white;
+  background-color: #FFE17F;
+  text-align: right;
+}
+
+.pop-product-slider-description {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.pop-product-feature-item {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.pop-product-feature-value {
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.pop-product-slider-slogan,
+.service-header,
 .about-header,
-.contacts-header {
-  font-family: "Raleway";
+.contacts-header,
+.subscribe-section-header {
+  font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
-.footer-html-academy-link path{
-  fill: #FFC700;
-}
-.delivery-offer-logo-background {
-  background-color: #FFE17F;
-  width: 125px;
-  height: 100px;
-  /* Не знал как лучше отцентрировать, подсмотрел в интернете такую реализацию */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.product-category-list {
+  list-style-type: none;
+ }
+
+.product-category-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
 }
 
 .product-category-logo-background {
@@ -66,3 +138,147 @@ body{
 .product-category-item:nth-child(2) .product-category-logo-background {
   align-items: flex-end;
 }
+
+.services {
+  background-color: #F0F0F0;
+}
+
+.service-list {
+  list-style-type: none;
+ }
+
+.delivery-offer b {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-html-academy-link path{
+  fill: #FFC700;
+}
+
+.delivery-offer {
+  background-color: #F0F0F0;
+}
+
+.delivery-offer-logo-background {
+  background-color: #FFE17F;
+  width: 125px;
+  height: 100px;
+  /* Не знал как лучше отцентрировать, подсмотрел в интернете такую реализацию */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery-companies-item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: inherit;
+}
+
+.contacts-schedule {
+  list-style-type: none;
+}
+
+.subscribe-section {
+  background-color: #F0F0F0;
+}
+.subscribe-form input {
+  font: inherit;
+}
+
+.page-footer {
+  color: white;
+  background-color: #444444;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-phone {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-navigation-list {
+  list-style-type: none;
+}
+
+.footer-navigation-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer-social-list {
+  list-style-type: none;
+}
+
+/* Кнопки */
+
+.button {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.servive-button {
+  border: 0px;
+}
+
+.service-list-item-current .button {
+  background-color: #000000;
+  color: #FFE17F;
+}
+
+.delivery-offer-info-button div {
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /* Не знал как лучше отцентрировать, подсмотрел в интернете такую реализацию */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-social div {
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-social path {
+  fill: #444444;
+}
+
