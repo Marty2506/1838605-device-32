@@ -1,3 +1,46 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/raleway/raleway-800.woff2") format("woff2");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+body{
+  font-family: "Rubik";
+}
+
+.about-header,
+.contacts-header {
+  font-family: "Raleway";
+  font-size: 50px;
+  line-height: 50px;
+}
+
 .footer-html-academy-link path{
   fill: #FFC700;
 }
@@ -13,7 +56,7 @@
 
 .product-category-logo-background {
   background-color: #FFE17F;
-  border: brown 1px dashed;
+  /* border: brown 1px dashed; */
   width: 160px;
   height: 160px;
   display: inline-flex;
