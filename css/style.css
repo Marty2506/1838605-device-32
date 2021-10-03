@@ -1,0 +1,25 @@
+.footer-html-academy-link path{
+  fill: #FFC700;
+}
+.delivery-offer-logo-background {
+  background-color: #FFE17F;
+  width: 125px;
+  height: 100px;
+  /* Не знал как лучше отцентрировать, подсмотрел в интернете такую реализацию */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-category-logo-background {
+  background-color: #FFE17F;
+  border: brown 1px dashed;
+  width: 160px;
+  height: 160px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-category-item:nth-child(2) .product-category-logo-background {
+  align-items: flex-end;
+}
