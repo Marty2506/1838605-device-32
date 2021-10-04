@@ -108,10 +108,12 @@ body{
 .service-header,
 .about-header,
 .contacts-header,
-.subscribe-section-header {
+.subscribe-section-header,
+.main-inner-title {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+  color: #000000;
 }
 
 .product-category-list {
@@ -237,6 +239,93 @@ body{
   list-style-type: none;
 }
 
+.breadcrumbs-link {
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.main-inner-subtitle {
+  font-family: "Raleway", sans-serif;
+  font-size: inherit;
+  line-height: 19px;
+  color: inherit;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog-filter-div {
+  background-color: #E5E5E5;
+}
+.catalog-filter-header-div {
+  background-color: #DCDCDC;
+}
+.catalog-filter-title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  letter-spacing: -0.02em; /* в макете так, это ок? */
+}
+.catalog-filter-label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.3;
+}
+.catalog-filter-list {
+  list-style-type: none;
+}
+.product-color-label,
+.bluetooth-exist-label {
+  line-height: 19px;
+  color: #000000;
+}
+
+.sorting-toolbar-div {
+  background-color: #E5E5E5;
+}
+.select-control {
+  font-size: inherit;
+  line-height: 19px;
+  color: #000000;
+  background-color: inherit;
+}
+
+.product-list {
+  list-style-type: none;
+}
+.product-card-link {
+  text-decoration: none;
+}
+.product-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: -0.02em;
+}
+.product-card-price {
+  font-weight: 400;
+}
+
+.pagination-div {
+  background-color: #EBEBEB;
+}
+.pagination-list {
+  list-style-type: none;
+}
+.pagination-link {
+  line-height: 19px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
 /* Кнопки */
 
 .button {
@@ -281,4 +370,24 @@ body{
 .button-social path {
   fill: #444444;
 }
+
+.filter-show-button {
+  border: 0px;
+  background-color: inherit;
+}
+
+.pagination-show-more {
+  border: 0px;
+  background-color: inherit;
+}
+
+/* Скрытие */
+
+/* .visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+} */
 
