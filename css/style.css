@@ -128,17 +128,26 @@ body{
   text-decoration: none;
 }
 
+.product-category-list {
+  display: flex;
+}
 .product-category-logo-background {
   background-color: #FFE17F;
   /* border: brown 1px dashed; */
   width: 160px;
   height: 160px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 .product-category-item:nth-child(2) .product-category-logo-background {
   align-items: flex-end;
+}
+.product-category-item:not(:last-child) {
+  margin-right: 40px; /* мб по другому надо, пока так*/
+}
+.product-category-link-text {
+  width: 160px;
 }
 
 .services {
@@ -170,7 +179,6 @@ body{
   background-color: #FFE17F;
   width: 125px;
   height: 100px;
-  /* Не знал как лучше отцентрировать, подсмотрел в интернете такую реализацию */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -267,7 +275,7 @@ body{
   font-size: 18px;
   line-height: 20px;
   color: #000000;
-  letter-spacing: -0.02em; /* в макете так, это ок? */
+  letter-spacing: -0.02em;
 }
 .catalog-filter-label {
   font-weight: 400;
@@ -347,23 +355,22 @@ body{
   color: #FFE17F;
 }
 
-.delivery-offer-info-button div {
+.delivery-offer-info-button-div {
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  /* Не знал как лучше отцентрировать, подсмотрел в интернете такую реализацию */
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.button-social div {
+.button-social-div {
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
