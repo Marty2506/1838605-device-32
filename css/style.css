@@ -172,12 +172,17 @@ body{
 .main-container {
   flex-grow: 1;
   /* width: 1160px; */
-  width: 100%; /* я сделал 100% из-за того что некоторые фоны должны тянуться до конца страницы. Верно?
-                Или фоны за пределы размера можно сделать по другому?*/
+  width: 100%;
   margin: 0 auto;
 }
 
 .pop-product-slider {
+  margin-bottom: 70px;
+}
+.pop-product-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 .pop-product-item {
   font-family: "Rubik", sans-serif;
@@ -208,6 +213,16 @@ body{
   line-height: 30px;
 }
 
+.pop-product-slider-pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.pop-product-slider-pagination-button {
+  width: 12px;
+  height: 12px;
+}
+
 .pop-product-slider-slogan,
 .service-header,
 .about-header,
@@ -221,7 +236,7 @@ body{
 }
 
 .product-category {
-  margin-bottom: 170px;
+  margin-bottom: 20px;
 }
 .product-category-list {
   list-style-type: none;
@@ -229,6 +244,11 @@ body{
   padding: 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+ .product-category-item {
+   margin-bottom: 20px;
  }
 
 .product-category-link {
@@ -237,6 +257,8 @@ body{
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-category-logo-background {
@@ -247,21 +269,22 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 33px;
 }
-.product-category-item:nth-child(2) .product-category-logo-background {
+.monopod-item .product-category-logo-background {
   align-items: flex-end;
 }
 
 .product-category-link-text {
   width: 160px;
+  letter-spacing: -0.02em;
 }
 
 .services-container {
-  background-color: #F0F0F0;
+  background: linear-gradient(180deg, #ffffff 20%, #f0f0f0 20%);
   margin-bottom: 90px;
 }
 .services {
-  height: 288px;
   display: flex;
 }
 
@@ -271,21 +294,26 @@ body{
 .service-list {
   margin: 0;
   padding: 0;
+  padding-top: 15px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
  }
+ .service-list-item:not(:last-of-type) {
+   margin-bottom: 15px;
+ }
  .service-tab-container {
-  width: 760px;
-  display: flex;
-  flex-direction: column;
+   padding-left: 120px;
+   width: 760px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
  }
  .service-tab {
 
  }
  .service-header {
    margin: 0;
-   margin-top: -30px;
  }
 
 .delivery-offer b {
@@ -306,6 +334,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .delivery-offer-logo-background {
@@ -319,13 +348,40 @@ body{
 
 .about-and-contacts-container {
   display: flex;
+  margin-bottom: 85px;
 }
 .about {
   width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.about-text {
+  margin: 0;
+}
+.delivery-companies-list {
+  margin: 0;
+  margin-top: 140px; /* временно*/
+  margin-bottom: auto;
+}
+.delivery-companies-item:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.about-button-container {
+  display: flex;
+  margin-top: 65px;
 }
 .contacts {
   width: 540px;
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contacts-text {
+  margin: 0;
+}
+.contacts-write-us-container {
+  display: flex;
+  margin-top: 65px;
 }
 
 .delivery-companies-item {
@@ -350,13 +406,14 @@ body{
 
 .contacts-schedule {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .subscribe-container {
   background-color: #F0F0F0;
 }
 .subscribe-section {
-  height: 421px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -371,6 +428,10 @@ body{
 .subscribe-form-container {
   width: 100%;
   display: flex;
+}
+.subscribe-form {
+  display: flex;
+  margin-bottom: 130px;
 }
 .subscribe-form input {
   font: inherit;
@@ -673,12 +734,18 @@ body{
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
+  display: block;
 }
 .servive-button {
   border: 0px;
 }
 
-.service-list-item-current .button {
+.servive-button {
+  width: 280px;
+  height: 40px;
+  text-align: start;
+}
+.service-list-item-current .servive-button {
   background-color: #000000;
   color: #FFE17F;
 }
