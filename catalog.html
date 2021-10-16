@@ -7,63 +7,74 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header-container page-width">
-        <a class="page-header-logo" href="index.html">
-          <img src="img/device-logo-header.svg" alt="Логотип Интернет-магазина «Девайс»" width="145" height="36">
-        </a>
-        <div class="page-header-wo-logo-container">
-          <div class="search-container">
-            <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post">
-              <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-              <button class="visually-hidden" type="submit">Найти</button>
-            </form>
-            <div class="page-header-catalog-container">
-              <a class="page-header-navigation-link" href="catalog.html">Каталог товаров</a>
-              <button class="catalog-more-button" type="button">
-                <span>+</span>
-              </button>
-            </div>
+      <div class="page-width">
+        <div class="page-header-container">
+          <div class="page-logo-container">
+            <a class="page-header-logo" href="index.html">
+              <img src="img/device-logo-header.svg" alt="Логотип Интернет-магазина «Девайс»" width="145" height="36">
+            </a>
           </div>
-          <div class="toolbar-and-nav-container">
-            <ul class="page-header-toolbar-list">
-              <li class="page-header-toolbar-item">
-                <a class="toolbar-link" href="#">
-                  <span class="toolbar-link-text">Коля Петухов</span>
-                </a>
-              </li>
-              <li class="page-header-toolbar-item">
-                <a class="toolbar-link" href="#">
-                  <span class="toolbar-link-text">Выйти</span>
-                </a>
-              </li>
-              <li class="page-header-toolbar-item">
-                <a class="toolbar-link" href="#">
-                  <span class="toolbar-link-text">Сравнить</span>
-                </a>
-              </li>
-              <li class="page-header-toolbar-item">
-                <a class="toolbar-link" href="#">
-                  <span class="toolbar-bucket-product-cnt">2</span>
-                  <span class="toolbar-link-text">Корзина</span>
-                </a>
-              </li>
-            </ul>
-            <nav class="page-header-navigation">
-              <ul class="page-header-navigation-list">
-                <li class="page-header-navigation-item">
-                  <a class="page-header-navigation-link" href="#">Доставка</a>
+          <div class="page-header-row-container">
+            <div class="page-header-left-column-container">
+              <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post">
+                <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+                <button class="visually-hidden" type="submit">Найти</button>
+              </form>
+            </div>
+            <div class="page-header-right-column-container">
+              <ul class="page-header-toolbar-list">
+                <li class="page-header-toolbar-item">
+                  <a class="toolbar-link" href="#">
+                    <span class="toolbar-link-text">Коля Петухов</span>
+                  </a>
                 </li>
-                <li class="page-header-navigation-item">
-                  <a class="page-header-navigation-link" href="#">Гарантия</a>
+                <li class="page-header-toolbar-item">
+                  <a class="toolbar-link" href="#">
+                    <span class="toolbar-link-text">Выйти</span>
+                  </a>
                 </li>
-                <li class="page-header-navigation-item">
-                  <a class="page-header-navigation-link" href="#">Контакты</a>
+                <li class="page-header-toolbar-item">
+                  <a class="toolbar-link" href="#">
+                    <span class="toolbar-link-text">Сравнить</span>
+                  </a>
+                </li>
+                <li class="page-header-toolbar-item">
+                  <a class="toolbar-link" href="#">
+                    <span class="toolbar-bucket-product-cnt">2</span>
+                    <span class="toolbar-link-text">Корзина</span>
+                  </a>
                 </li>
               </ul>
-            </nav>
+            </div>
+          </div>
+          <div class="page-header-row-container">
+            <div class="page-header-left-column-container">
+              <div class="page-header-catalog-container">
+                <a class="page-header-navigation-link" href="catalog.html">Каталог товаров</a>
+                <button class="catalog-more-button" type="button">
+                  <span>+</span>
+                </button>
+              </div>
+            </div>
+            <div class="page-header-right-column-container">
+              <nav class="page-header-navigation">
+                <ul class="page-header-navigation-list">
+                  <li class="page-header-navigation-item">
+                    <a class="page-header-navigation-link" href="#">Доставка</a>
+                  </li>
+                  <li class="page-header-navigation-item">
+                    <a class="page-header-navigation-link" href="#">Гарантия</a>
+                  </li>
+                  <li class="page-header-navigation-item">
+                    <a class="page-header-navigation-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
+
     </header>
 
     <main class="main-inner">
@@ -86,7 +97,7 @@
       <section class="product-catalog page-width">
         <!-- Проблема с цветами вбок до конца страницы. Когда одна колонка было понятно как сделать.
              С двумя возникла проблема. Посоветуй в какую сторону смотреть. -->
-        <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
+        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
         <div class="catalog-filter-container inner-page-left-padding">
           <div class="catalog-filter-header-container">
             <h3 class="main-inner-subtitle">Фильтр:</h3>
@@ -178,7 +189,7 @@
           <div class="sorting-header-container">
             <h3 class="main-inner-subtitle">Сортировка:</h3>
             <form class="sorting-type">
-              <label class="visually-hidden" for="sorting" hidden>Сортировка</label>
+              <label class="visually-hidden" for="sorting">Сортировка</label>
               <select class="select-control" id="sorting" name="sorting">
                 <option value="popular">Сначала популярные</option>
                 <option value="cheap">Сначала дешёвые</option>
@@ -303,7 +314,7 @@
           </div>
           <div class="footer-center-column-container">
             <section class="footer-social">
-              <h2 class="visually-hidden" hidden>Соцсети</h2>
+              <h2 class="visually-hidden">Соцсети</h2>
               <ul class="footer-social-list">
                 <li class="footer-social-item">
                   <a class="button-social" href="https://www.facebook.com/htmlacademy">

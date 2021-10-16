@@ -48,9 +48,6 @@ body{
 }
 
 /* ХЭДЕР */
-.page-header{
-
-}
 
 .page-width {
   width: 1160px;
@@ -61,7 +58,6 @@ body{
 .page-header-container {
   display: flex;
   flex-direction: column;
-  /* height: 186px; */
   background-color: #FFE17F;
   margin-top: 40px;
   padding-right: 60px;
@@ -70,20 +66,23 @@ body{
   box-sizing: border-box;
 }
 
-/* тест */
 .page-header-row-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 .page-header-row-container:not(:last-of-type) {
   margin-bottom: 44px;
 }
 .page-header-left-column-container {
   width: 540px;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
 }
 .page-header-right-column-container {
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
 }
 
 .page-header-logo {
@@ -94,37 +93,21 @@ body{
   margin-top: -23px;
 }
 
-.page-header-wo-logo-container {
-  display: flex;
-  flex-grow: 1;
-}
-.search-container {
-  display: flex;
-  flex-direction: column;
-  width: 540px;
-  justify-content: space-between;
-}
 .search-form input {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 19px;
   padding: 0;
-}
-.page-header-catalog-container {
-
-}
-.toolbar-and-nav-container {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border: none;
+  background-color: transparent;
 }
 
 .page-header-toolbar-list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0; /* Тут нужны паддинги?*/
   display: flex;
+  flex-wrap: nowrap; /* Могут ли тут быть еще элементы?*/
 }
 .page-header-toolbar-item:not(:first-of-type) {
   /* width: 100px; */
@@ -154,8 +137,8 @@ body{
   background-color: white;
 }
 
-.page-header-navigation {
-
+.page-header-catalog-container {
+  display: flex;
 }
 .page-header-navigation-list {
   list-style-type: none;
@@ -180,6 +163,8 @@ body{
   letter-spacing: 0.2em;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
+  padding: 0; /* Тут нужны паддинги?*/
 }
 
 /* Главная страница */
