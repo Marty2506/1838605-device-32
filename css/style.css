@@ -114,14 +114,14 @@ body{
   flex-wrap: nowrap; /* Могут ли тут быть еще элементы?*/
 }
 .page-header-toolbar-item:not(:first-of-type) {
-  margin-left: 20px;
+  margin-left: 55px;
 }
 .page-header-toolbar-item:nth-of-type(2) {
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: 17px;
 }
 .page-header-toolbar-item:first-of-type {
-  width: 120px;
-  margin-right: 38px;
+  max-width: 140px;
 }
 .page-header-toolbar-item:nth-last-child(2) {
   margin-left: auto;
@@ -132,8 +132,55 @@ body{
   line-height: 19px;
   color: #000000;
   text-decoration: none;
-  display: block;
+  display: flex;
   word-wrap: break-word;
+  position: relative;
+  padding-left: 23px;
+  align-items: center;
+}
+.page-header-toolbar-item:nth-child(2) .toolbar-link{
+  padding-left: 0;
+}
+.toolbar-link::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: calc(50% - 9px);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-header-toolbar-item:nth-child(1) .toolbar-link::before {
+  background-image: url("/img/icons/user.svg");
+}
+.page-header-toolbar-item:nth-last-child(2) .toolbar-link::before {
+  background-image: url("/img/icons/compare.svg");
+}
+.page-header-toolbar-item:nth-last-child(1) .toolbar-link::before {
+  background-image: url("/img/icons/cart.svg");
+}
+.toolbar-link:hover {
+  opacity: 0.6;
+}
+.toolbar-link:focus {
+  outline: none;
+}
+.toolbar-link:focus-visible::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 2px;
+}
+.toolbar-link:active {
+  opacity: 0.3;
 }
 
 .toolbar-bucket-product-cnt {
@@ -141,6 +188,14 @@ body{
   line-height: 17px;
   color: #000000;
   background-color: white;
+  border-radius: 50%;
+  display: flex;
+  width: 21px;
+  height: 21px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -13px;
 }
 
 .page-header-catalog-container {
@@ -192,8 +247,10 @@ body{
 .page-header-navigation-link:hover::after{
   background-color: #000000;
 }
-.page-header-navigation-link:focus {
-  outline: 2px solid #AF4FFF;
+.page-header-navigation-link:focus-visible {
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 2px;
 }
 .page-header-navigation-link:active {
   opacity: 0.3;
