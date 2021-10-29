@@ -413,7 +413,7 @@ body{
 }
 
 .product-category {
-  margin-bottom: 20px;
+  margin-bottom: 69px;
 }
 .product-category-list {
   list-style-type: none;
@@ -458,15 +458,42 @@ body{
 }
 
 .services-container {
-  background: linear-gradient(180deg, #ffffff 20%, #f0f0f0 20%);
+  /* background: linear-gradient(180deg, #ffffff 20%, #f0f0f0 20%); */
   margin-bottom: 90px;
+  padding-top: 70px;
+  position: relative;
+}
+.services-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  z-index: -1;
 }
 .services {
   display: flex;
+  padding-bottom: 70px;
 }
 
 .service-list-container {
   width: 280px;
+  z-index: 1;
+  position: relative;
+  min-height: 250px;
+}
+.service-list-container::after {
+  content: "";
+  position: absolute;
+  right: -3.5px;
+  top: -70px;
+  bottom: 0px;
+  /* height: 320px; */
+  width: 7px;
+  background-color: black;
+  z-index: -1;
 }
 .service-list {
   margin: 0;
@@ -481,16 +508,40 @@ body{
  }
  .service-tab-container {
    padding-left: 120px;
-   width: 760px;
+   width: 880px;
    box-sizing: border-box;
    display: flex;
    flex-direction: column;
  }
  .service-tab {
-
+  position: relative;
+ }
+ .service-tab::after {
+   content: "";
+   position: absolute;
+   right: 50px;
+   top: 0;
+   width: 200px;
+   height: 200px;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+ .service-tab:nth-child(1)::after {
+  background-image: url("/img/service-icons/delivery.svg");
+ }
+ .service-tab:nth-child(2)::after {
+  background-image: url("/img/service-icons/warranty.svg");
+ }
+ .service-tab:nth-child(3)::after {
+  background-image: url("/img/service-icons/credit.svg");
  }
  .service-header {
    margin: 0;
+ }
+ .service-description {
+   width: 500px;
+   margin: 0;
+   margin-top: 30px;
  }
 
 .delivery-offer b {
@@ -985,6 +1036,9 @@ body{
   box-sizing: border-box;
   position: relative;
   border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 .button::after {
   content: "";
@@ -993,7 +1047,7 @@ body{
   left: 0;
   width: 100%;
   height: 8px;
-  background-color: #FFE17F;
+  background-color: #FFC700;
   z-index: -1;
 }
 .button:focus {
@@ -1023,6 +1077,9 @@ body{
   height: 50px;
   line-height: 50px;
 }
+.pop-slider-about-button::after {
+  background-color: #FFE17F;
+}
 .pop-slider-about-button:hover {
   background-color: #FFE17F;
 }
@@ -1038,16 +1095,38 @@ body{
   opacity: 0.2;
   cursor: pointer;
 }
-.servive-button {
-  border: 0px;
+
+.service-button {
+  min-width: 160px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.service-button:hover {
+  background-color: #FFC700;
+}
+/* Продолжение черного фона*/
+.service-button::before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  z-index: -1;
+}
+.service-button:active::before{
+  background-color: #000000;
+}
+.service-button:active{
+  background-color: #000000;
+  color: #FFE17F;
+  opacity: 1;
 }
 
-.servive-button {
-  width: 280px;
-  height: 40px;
-  text-align: start;
-}
-.service-list-item-current .servive-button {
+.service-list-item-current .service-button,
+.service-list-item-current .service-button::before {
   background-color: #000000;
   color: #FFE17F;
 }
