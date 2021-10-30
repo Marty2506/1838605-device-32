@@ -717,18 +717,12 @@ body{
   width: 500px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .about-text,
 .contacts-text {
   margin: 0;
   margin-bottom: 20px;
-}
-.delivery-companies-list {
-  margin: 0;
-  margin-top: auto;
-}
-.delivery-companies-item:not(:last-of-type) {
-  margin-bottom: 15px;
 }
 .about-contacts-button-container {
   display: flex;
@@ -740,12 +734,34 @@ body{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
 }
-
+.delivery-companies-list {
+  margin: 0;
+  margin-top: auto;
+  padding: 0;
+  list-style-type: none;
+}
 .delivery-companies-item {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  padding-left: 35px;
+  position: relative;
+}
+.delivery-companies-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFC700;
+}
+.delivery-companies-item:not(:last-of-type) {
+  margin-bottom: 15px;
 }
 
 .contacts-subtitle {
@@ -772,6 +788,17 @@ body{
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.about::before,
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: black;
 }
 
 .subscribe-container {
