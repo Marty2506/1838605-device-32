@@ -519,6 +519,27 @@ body{
   width: 160px;
   letter-spacing: -0.02em;
 }
+.product-category-link:hover .product-category-logo-background {
+  background-color: #FFC700;
+}
+.product-category-link:focus {
+  outline: none;
+}
+.product-category-link:focus .product-category-link-text{
+  color: #AF4FFF;
+}
+.product-category-link:focus .product-category-logo-background{
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 5px;
+}
+.product-category-link:active .product-category-logo-background{
+  background-color: #FFC700;
+}
+.product-category-link:active {
+  opacity: 0.3;
+}
+
 
 .services-container {
   /* background: linear-gradient(180deg, #ffffff 20%, #f0f0f0 20%); */
