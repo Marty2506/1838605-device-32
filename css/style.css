@@ -432,6 +432,7 @@ body{
   bottom: 192px;
   right: 50px;
   display: flex;
+  z-index: 4;
 }
 .pop-product-slider-pagination-button {
   width: 12px;
@@ -439,8 +440,21 @@ body{
   border: 2px solid #000000;
   border-radius: 50%;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   background: transparent;
+  cursor: pointer;
+  z-index: 4;
+}
+.pop-product-slider-pagination-button:hover {
+  opacity: 0.6;
+}
+.pop-product-slider-pagination-button:focus {
+  border-color: #AF4FFF;
+  outline: none;
+}
+.pop-product-slider-pagination-button:active {
+  opacity: 0.3;
 }
 .pop-product-slider-pagination-button-current {
   background-color: #000000;
