@@ -525,10 +525,10 @@ body{
 .product-category-link:focus {
   outline: none;
 }
-.product-category-link:focus .product-category-link-text{
+.product-category-link:focus-visible .product-category-link-text{
   color: #AF4FFF;
 }
-.product-category-link:focus .product-category-logo-background{
+.product-category-link:focus-visible .product-category-logo-background{
   outline-color: #AF4FFF;
   outline-style: solid;
   outline-width: 5px;
