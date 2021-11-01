@@ -637,10 +637,6 @@ body{
   text-transform: uppercase;
 }
 
-.footer-html-academy-link path{
-  fill: #FFC700;
-}
-
 .delivery-offer {
   background-color: #F0F0F0;
   display: flex;
@@ -1187,10 +1183,31 @@ body{
   color: inherit;
   text-decoration: none;
   display: block;
-  width: 293px;
   text-align: right;
+  position: relative;
 }
-
+.footer-contacts-phone:hover {
+  color: #FFC700;
+}
+.footer-contacts-phone:focus {
+  outline: none;
+}
+.footer-contacts-phone:focus::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -10px;
+  right: -10px;
+  border-radius: 25px;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 2px;
+}
+.footer-contacts-phone:active {
+  color: #FFC700;
+  opacity: 0.3;
+}
 .footer-navigation-list {
   list-style-type: none;
   margin: 0;
@@ -1215,6 +1232,41 @@ body{
   letter-spacing: 0.2em;
   text-decoration: none;
   text-transform: uppercase;
+  position: relative;
+}
+.footer-navigation-link::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -8px;
+  left: 0px;
+  height: 2px;
+  background-color: transparent;
+}
+.footer-navigation-link:hover {
+  color: #FFC700;
+}
+.footer-navigation-link:hover::after{
+  background-color: #FFC700;
+}
+.footer-navigation-link:focus-visible {
+  outline: none;
+}
+.footer-navigation-link:focus-visible::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  left: -20px;
+  right: -20px;
+  border-radius: 25px;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 2px;
+}
+.footer-navigation-link:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .footer-social-list {
@@ -1232,6 +1284,35 @@ body{
 .footer-orange-line {
   width: 80px;
   border-top: 7px #FFC700 solid;
+}
+
+.footer-html-academy-link {
+  position: relative;
+}
+.html-academy-icon path{
+  fill: #FFC700;
+}
+.footer-html-academy-link:hover .html-academy-icon path{
+  fill: #FFFFFF;
+}
+.footer-html-academy-link:focus-visible{
+  outline: none;
+}
+.footer-html-academy-link:focus-visible::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  border-radius: 10px;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 2px;
+}
+.footer-html-academy-link:active .html-academy-icon:active path{
+  fill: #FFFFFF;
+  opacity: 0.3;
 }
 
 /* Кнопки */
