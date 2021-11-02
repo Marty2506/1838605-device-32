@@ -328,7 +328,7 @@ body{
 .pop-product-slider-button:hover {
   opacity: 0.6;
 }
-.pop-product-slider-button:focus {
+.pop-product-slider-button:focus-visible {
   border-radius: 6px;
   outline-color: #AF4FFF;
   outline-style: solid;
@@ -449,7 +449,7 @@ body{
 .pop-product-slider-pagination-button:hover {
   opacity: 0.6;
 }
-.pop-product-slider-pagination-button:focus {
+.pop-product-slider-pagination-button:focus-visible {
   border-color: #AF4FFF;
   outline: none;
 }
@@ -716,7 +716,7 @@ body{
 .delivery-offer:hover .delivery-offer-info::after{
   opacity: 1;
 }
-.delivery-offer:focus {
+.delivery-offer:focus-visible {
   outline-color: #AF4FFF;
   outline-style: solid;
   outline-width: 5px;
@@ -1381,7 +1381,7 @@ body{
 .about-contacts-button:hover {
   background-color: #FFC700;
 }
-.about-contacts-button:focus::after {
+.about-contacts-button:focus-visible::after {
   background-color: #AF4FFF;
 }
 .about-contacts-button:active {
@@ -1410,7 +1410,7 @@ body{
 .pop-slider-about-button:hover {
   background-color: #FFE17F;
 }
-.pop-slider-about-button:focus::after {
+.pop-slider-about-button:focus-visible::after {
   background-color: #AF4FFF;
 }
 .pop-slider-about-button:active {
@@ -1440,7 +1440,7 @@ body{
 .service-button:hover {
   background-color: #FFC700;
 }
-.service-button:focus::after {
+.service-button:focus-visible::after {
   background-color: #AF4FFF;
 }
 /* Продолжение черного фона*/
@@ -1471,7 +1471,7 @@ body{
   border-color: black;
   background-color: black;
 }
-.subscribe-button:focus {
+.subscribe-button:focus-visible {
   border-color: #AF4FFF;
   outline: none;
 }
