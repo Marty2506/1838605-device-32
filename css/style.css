@@ -1192,7 +1192,7 @@ body{
 .footer-contacts-phone:focus {
   outline: none;
 }
-.footer-contacts-phone:focus::after {
+.footer-contacts-phone:focus-visible::after {
   content: "";
   position: absolute;
   top: -2px;
