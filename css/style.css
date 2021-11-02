@@ -500,26 +500,48 @@ body{
   display: flex;
   flex-direction: column;
 }
-
-.product-category-logo-background {
+.product-category-logo {
   background-color: #FFE17F;
-  /* border: brown 1px dashed; */
   width: 160px;
   height: 160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 33px;
+  position: relative;
 }
-.monopod-item .product-category-logo-background {
-  align-items: flex-end;
+.product-category-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
+.product-category-item:nth-child(1) .product-category-logo::after {
+  background-image: url("/img/category-icons/virtual.svg");
+}
+.product-category-item:nth-child(2) .product-category-logo::after {
+  background-image: url("/img/category-icons/monopod.svg");
+  background-position: bottom;
+}
+.product-category-item:nth-child(3) .product-category-logo::after {
+  background-image: url("/img/category-icons/camera.svg");
+}
+.product-category-item:nth-child(4) .product-category-logo::after {
+  background-image: url("/img/category-icons/tracker.svg");
+}
+.product-category-item:nth-child(5) .product-category-logo::after {
+  background-image: url("/img/category-icons/watch.svg");
+}
+.product-category-item:nth-child(6) .product-category-logo::after {
+  background-image: url("/img/category-icons/copter.svg");
+}
 .product-category-link-text {
   width: 160px;
   letter-spacing: -0.02em;
 }
-.product-category-link:hover .product-category-logo-background {
+.product-category-link:hover .product-category-logo {
   background-color: #FFC700;
 }
 .product-category-link:focus {
@@ -528,15 +550,15 @@ body{
 .product-category-link:focus-visible .product-category-link-text{
   color: #AF4FFF;
 }
-.product-category-link:focus-visible .product-category-logo-background{
+.product-category-link:focus-visible .product-category-logo{
   outline-color: #AF4FFF;
   outline-style: solid;
   outline-width: 5px;
 }
-.product-category-link:active .product-category-logo-background{
-  background-color: #FFC700;
+.product-category-link:active .product-category-logo::after{
+  opacity: 0.3;
 }
-.product-category-link:active {
+.product-category-link:active .product-category-link-text{
   opacity: 0.3;
 }
 
