@@ -1289,10 +1289,10 @@ body{
 .footer-html-academy-link {
   position: relative;
 }
-.html-academy-icon path{
+.html-academy-icon{
   fill: #FFC700;
 }
-.footer-html-academy-link:hover .html-academy-icon path{
+.footer-html-academy-link:hover .html-academy-icon{
   fill: #FFFFFF;
 }
 .footer-html-academy-link:focus-visible{
@@ -1310,7 +1310,7 @@ body{
   outline-style: solid;
   outline-width: 2px;
 }
-.footer-html-academy-link:active .html-academy-icon:active path{
+.footer-html-academy-link:active .html-academy-icon:active{
   fill: #FFFFFF;
   opacity: 0.3;
 }
@@ -1458,17 +1458,41 @@ body{
   border-color: black;
   background-color: black;
 }
-
-.button-social-div {
-  background-color: rgba(220, 220, 220, 0.5);
+.button-social {
+  background-color: rgba(220, 220, 220, 0.3);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: inline-block;
 }
-.button-social path {
+.social-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill: #444444;
+}
+.button-social:hover {
+  background-color: #FFC700;
+}
+.button-social:focus-visible {
+  background-color: transparent;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 5px;
+}
+.button-social:focus-visible .social-icon{
+  fill: #FFFFFF;
+}
+.button-social:active {
+  outline: none;
+  background-color: #FFC700;
+}
+.button-social:active .social-icon{
+  opacity: 0.3;
   fill: #444444;
 }
 
