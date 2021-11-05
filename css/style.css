@@ -1151,12 +1151,38 @@ body{
   margin-left: 20px;
   width: 11px;
   height: 10px;
+  opacity: 1;
+  position: relative;
 }
 .button-sort-up {
   background: url("../img/icons/sort-up.svg") no-repeat center;
 }
 .button-sort-down {
   background: url("../img/icons/sort-down.svg") no-repeat center;
+}
+.button-sort:hover {
+  opacity: 0.5;
+}
+.button-sort:focus-visible {
+  outline: none;
+}
+.button-sort:focus-visible .button-sort::after{
+  opacity: 1;
+}
+/* Как сдлеать чтобы прозрачность не применялась на псевдоэлемент? */
+.button-sort:focus-visible::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 5px;
+}
+.active-sort {
+  opacity: 0.2;
 }
 
 .product-list {
