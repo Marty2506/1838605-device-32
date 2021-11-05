@@ -109,7 +109,7 @@ body{
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  background-image: url("/img/icons/search.svg");
+  background-image: url("../img/icons/search.svg");
   background-position: center;
   background-repeat: no-repeat;
   fill: black;
@@ -224,13 +224,13 @@ body{
   background-repeat: no-repeat;
 }
 .page-header-toolbar-item:nth-child(1) .toolbar-link::before {
-  background-image: url("/img/icons/user.svg");
+  background-image: url("../img/icons/user.svg");
 }
 .page-header-toolbar-item:nth-last-child(2) .toolbar-link::before {
-  background-image: url("/img/icons/compare.svg");
+  background-image: url("../img/icons/compare.svg");
 }
 .page-header-toolbar-item:nth-last-child(1) .toolbar-link::before {
-  background-image: url("/img/icons/cart.svg");
+  background-image: url("../img/icons/cart.svg");
 }
 .toolbar-link:hover {
   opacity: 0.6;
@@ -312,13 +312,13 @@ body{
   border-radius: 50%;
   box-sizing: border-box;
   border: 2px solid black;
-  background-image: url("/img/icons/plus.svg");
+  background-image: url("../img/icons/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.2;
 }
 .page-header-catalog-link:hover::after{
-  background-image: url("/img/icons/minus.svg");
+  background-image: url("../img/icons/minus.svg");
   opacity: 1;
 }
 .page-header-navigation-link::after {
@@ -392,10 +392,10 @@ body{
   z-index: 4;
 }
 .slider-prev {
-  background-image: url("/img/icons/left-tall-arrow.svg");
+  background-image: url("../img/icons/left-tall-arrow.svg");
 }
 .slider-next {
-  background-image: url("/img/icons/right-tall-arrow.svg");
+  background-image: url("../img/icons/right-tall-arrow.svg");
 }
 .pop-product-slider-button:hover {
   opacity: 0.6;
@@ -591,23 +591,23 @@ body{
   background-position: center;
 }
 .product-category-item:nth-child(1) .product-category-logo::after {
-  background-image: url("/img/category-icons/virtual.svg");
+  background-image: url("../img/category-icons/virtual.svg");
 }
 .product-category-item:nth-child(2) .product-category-logo::after {
-  background-image: url("/img/category-icons/monopod.svg");
+  background-image: url("../img/category-icons/monopod.svg");
   background-position: bottom;
 }
 .product-category-item:nth-child(3) .product-category-logo::after {
-  background-image: url("/img/category-icons/camera.svg");
+  background-image: url("../img/category-icons/camera.svg");
 }
 .product-category-item:nth-child(4) .product-category-logo::after {
-  background-image: url("/img/category-icons/tracker.svg");
+  background-image: url("../img/category-icons/tracker.svg");
 }
 .product-category-item:nth-child(5) .product-category-logo::after {
-  background-image: url("/img/category-icons/watch.svg");
+  background-image: url("../img/category-icons/watch.svg");
 }
 .product-category-item:nth-child(6) .product-category-logo::after {
-  background-image: url("/img/category-icons/copter.svg");
+  background-image: url("../img/category-icons/copter.svg");
 }
 .product-category-link-text {
   width: 160px;
@@ -705,13 +705,13 @@ body{
    background-position: center;
  }
  .service-tab:nth-child(1)::after {
-  background-image: url("/img/service-icons/delivery.svg");
+  background-image: url("../img/service-icons/delivery.svg");
  }
  .service-tab:nth-child(2)::after {
-  background-image: url("/img/service-icons/warranty.svg");
+  background-image: url("../img/service-icons/warranty.svg");
  }
  .service-tab:nth-child(3)::after {
-  background-image: url("/img/service-icons/credit.svg");
+  background-image: url("../img/service-icons/credit.svg");
  }
  .service-header {
    margin: 0;
@@ -755,7 +755,7 @@ body{
   height: 100px;
   top: 0;
   left: 0;
-  background-image: url("/img/icons/delivery.svg");
+  background-image: url("../img/icons/delivery.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -776,7 +776,7 @@ body{
   left: 0;
   width: 40px;
   height: 40px;
-  background-image: url("/img/icons/info.svg");
+  background-image: url("../img/icons/info.svg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
@@ -970,7 +970,7 @@ body{
   top: 50%;
   transform: translateY(-50%);
   left:0;
-  background-image: url("/img/icons/tick-big.svg");
+  background-image: url("../img/icons/tick-big.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1124,10 +1124,10 @@ body{
   height: 10px;
 }
 .button-sort-up {
-  background: url("/img/icons/sort-up.svg") no-repeat center;
+  background: url("../img/icons/sort-up.svg") no-repeat center;
 }
 .button-sort-down {
-  background: url("/img/icons/sort-down.svg") no-repeat center;
+  background: url("../img/icons/sort-down.svg") no-repeat center;
 }
 
 .product-list {
