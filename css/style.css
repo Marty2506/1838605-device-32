@@ -591,23 +591,23 @@ body{
   background-repeat: no-repeat;
   background-position: center;
 }
-.product-category-item:nth-child(1) .product-category-logo::after {
+.product-category-virtual .product-category-logo::after {
   background-image: url("../img/category-icons/virtual.svg");
 }
-.product-category-item:nth-child(2) .product-category-logo::after {
+.product-category-monopod .product-category-logo::after {
   background-image: url("../img/category-icons/monopod.svg");
   background-position: bottom;
 }
-.product-category-item:nth-child(3) .product-category-logo::after {
+.product-category-camera .product-category-logo::after {
   background-image: url("../img/category-icons/camera.svg");
 }
-.product-category-item:nth-child(4) .product-category-logo::after {
+.product-category-tracker .product-category-logo::after {
   background-image: url("../img/category-icons/tracker.svg");
 }
-.product-category-item:nth-child(5) .product-category-logo::after {
+.product-category-watch .product-category-logo::after {
   background-image: url("../img/category-icons/watch.svg");
 }
-.product-category-item:nth-child(6) .product-category-logo::after {
+.product-category-copter .product-category-logo::after {
   background-image: url("../img/category-icons/copter.svg");
 }
 .product-category-link-text {
