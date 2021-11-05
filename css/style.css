@@ -983,9 +983,48 @@ body{
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
+  position: relative;
+}
+.breadcrumbs-item:not(:first-child) .breadcrumbs-link {
+  padding-left: 19px;
+}
+.breadcrumbs-item:not(:first-child) .breadcrumbs-link::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-image: url("../img/icons/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+}
+.breadcrumbs-item:not(:last-of-type) .breadcrumbs-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+.breadcrumbs-link:focus {
+  outline: none;
+}
+.breadcrumbs-link:focus-visible::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: -5px;
+  bottom: -5px;
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 5px;
+}
+.breadcrumbs-item:not(:first-child) .breadcrumbs-link:focus-visible::after {
+  left: 7px; /* -12 + 19*/
+}
+.breadcrumbs-item:not(:last-of-type) .breadcrumbs-link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-inner-subtitle {
