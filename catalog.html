@@ -108,19 +108,29 @@
               <form class="catalog-filter-form inner-page-left-padding" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость</legend>
-                  <!-- TODO: подумать на range реализацией -->
-                  <button class="range-toggle toggle-min" type="button">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="range-toggle toggle-max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
-                  <label class="catalog-filter-label">
-                    от <input class="catalog-filter-input" type="number" name="price-from" value="0">
-                  </label>
-                  <label class="catalog-filter-label">
-                    до <input class="catalog-filter-input" type="number" name="price-to" value="5000">
-                  </label>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 10px; width: 100px">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="range-inputs-container">
+                    <!-- Чтобы сделать фокус пришлось перелапатить порядок... -->
+                    <input class="range-input range-input-min" type="number" name="price-from" id="price-from" value="0">
+                    <label class="range-label range-label-min" for="price-from">от</label>
+                    <input class="range-input range-input-max" type="number" name="price-to" id="price-to" value="5000">
+                    <label class="range-label range-label-max" for="price-to">до</label>
+                    <!-- <label class="catalog-filter-label">
+                      от <input class="range-input" type="number" name="price-from" value="0">
+                    </label>
+                    <label class="catalog-filter-label">
+                      до <input class="range-input" type="number" name="price-to" value="5000">
+                    </label> -->
+                  </div>
                 </fieldset>
 
                 <fieldset class="catalog-filter-group">

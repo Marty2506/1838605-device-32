@@ -1032,7 +1032,7 @@ body{
   font-size: inherit;
   font-size: 16px;
   line-height: 19px;
-  color: inherit;
+  color: #000000;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-right: 40px;
@@ -1065,6 +1065,9 @@ body{
   z-index: -2;
   width: calc(50% - 300px);
 }
+.catalog-filter-form {
+  width: 200px;
+}
 .sorting-container {
   /* flex-grow: 1; */
   width: 830px;
@@ -1092,7 +1095,12 @@ body{
   margin: 0;
   padding: 0;
   border: 0px;
-  margin-bottom: 12px;
+  margin-bottom: 36px;
+  position: relative;
+}
+.catalog-filter-group::before {
+  content: "";
+  position: absolute;
 }
 .catalog-filter-title {
   padding: 0;
@@ -1102,13 +1110,104 @@ body{
   line-height: 20px;
   color: #000000;
   letter-spacing: -0.02em;
+  padding-top: 12px;
+  border-top: solid black 2px;
+  width: 100%;
+  margin-bottom: 30px;
 }
-.catalog-filter-label {
+/* Range */
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 16px;
+  background-color: #DCDCDC;
+  border-radius: 2px;
+}
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #EBEBEB;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.range-toggle:focus-visible {
+  outline: none;
+  border-color: #AF4FFF;
+}
+.range-toggle:active {
+  background-color: #000000;
+}
+.toggle-min {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -40%);
+}
+.toggle-max {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -40%);
+}
+.range-inputs-container {
+  display: flex;
+}
+
+.range-label {
+  font-family: inherit;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  margin-right: 5px;
+}
+.range-input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  padding: 0 2px;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+.range-label-min {
+  order: 1;
+}
+.range-input-min {
+  order: 2;
+}
+.range-label-max {
+  order: 3;
+}
+.range-input-max {
+  order: 4;
+}
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.range-input:focus-visible,
+.range-input:focus-visible + .range-label {
+  outline: none;
+  color: #AF4FFF;
   opacity: 0.3;
+}
+/* Что значит активность? В какой момент надое выделять? */
+.range-input:active,
+.range-input:active + .range-label {
+  color: #000000;
+  opacity: 1;
 }
 .catalog-filter-list {
   list-style-type: none;
