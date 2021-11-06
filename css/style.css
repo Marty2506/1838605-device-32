@@ -1309,12 +1309,6 @@ body{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.product-color-label,
-.bluetooth-exist-label {
-  line-height: 19px;
-  color: #000000;
-}
-
 .sorting-header-container {
   display: flex;
   align-items: center;
@@ -1338,9 +1332,30 @@ body{
 }
 .select-control {
   font-size: inherit;
+  font-size: 16px;
   line-height: 19px;
   color: #000000;
   background-color: inherit;
+  padding: 7px 13px;
+  padding-right: 41px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  background-image: url("../img/icons/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
+.select-control:hover {
+  opacity: 0.6;
+}
+.select-control:focus-visible {
+  outline: none;
+  border-color: #AF4FFF;
+  border-style: solid;
+}
+.select-control:active {
+  opacity: 0.3;
 }
 .button-sort {
   display: block;
