@@ -56,7 +56,7 @@ body{
 }
 
 .page-header {
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .page-header-container {
@@ -185,6 +185,9 @@ body{
   display: flex;
   flex-wrap: nowrap; /* Могут ли тут быть еще элементы?*/
 }
+.page-header-toolbar-item {
+  position: relative;
+}
 .page-header-toolbar-item:not(:first-of-type) {
   margin-left: 55px;
 }
@@ -301,6 +304,7 @@ body{
   text-transform: uppercase;
   display: block;
   position: relative;
+  z-index: 2;
 }
 .page-header-catalog-link::after{
   content: "";
@@ -356,6 +360,120 @@ body{
   opacity: 0.3;
   outline: none;
 }
+
+/* Поповер для корзины */
+.popover-cart {
+  width: 320px;
+  min-height: 221px;
+  background-color: #000000;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  transform: translate(-48%, 12px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+/* Такой способ плохо работает)) */
+/* .toolbar-link:hover + .popover-cart {
+  display: flex;
+} */
+.popover-cart::before {
+  content: "";
+  width: 14px;
+  height: 6px;
+  background-image: url("../img/icons/triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate(153px, -6px);
+}
+.popover-cart-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.popover-cart-item {
+  display: flex;
+  padding: 20px;
+}
+.popover-cart-item-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
+}
+.popover-cart-item-link:hover {
+  opacity: 0.6;
+}
+.popover-cart-item-link:focus {
+  outline: none;
+}
+.popover-cart-item-link:focus .popover-cart-image{
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 5px;
+}
+.popover-cart-item-link:focus .popover-cart-title {
+  color: #AF4FFF;
+}
+.popover-cart-item-link:active {
+  opacity: 0.3;
+}
+.popover-cart-image {
+  margin-right: 23px;
+  display: block;
+}
+.popover-delete-button {
+  margin-left: auto;
+  width: 12px;
+  height: 12px;
+  border: none;
+  margin-top: 4px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+.popover-delete-button-icon {
+  fill: #FFFFFF;
+}
+.popover-delete-button:hover {
+  opacity: 0.6;
+}
+.popover-delete-button:focus {
+  outline: none;
+}
+.popover-delete-button:focus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -52%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #AF4FFF;
+  box-sizing: border-box;
+}
+.popover-delete-button:active {
+  opacity: 0.3;
+}
+.popover-cart-summary {
+  display: flex;
+  background-color: #1A1A1A;
+  min-height: 44px;
+  padding: 0px 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+
 /* Главная страница */
 
 .main-container {
@@ -641,6 +759,7 @@ body{
   margin-bottom: 90px;
   padding-top: 70px;
   position: relative;
+  min-width: 1160px;
 }
 .services-container::after {
   content: "";
@@ -885,6 +1004,7 @@ body{
   background-color: #F0F0F0;
   padding-top: 75px;
   padding-bottom: 130px;
+  min-width: 1160px;
 }
 .subscribe-section {
   display: grid;
@@ -967,6 +1087,9 @@ body{
 
 
 /* Страница каталога */
+.main-inner {
+  min-width: 1160px;
+}
 .inner-page-left-padding {
   padding-left: 60px;
 }
@@ -1553,6 +1676,7 @@ body{
   background-color: #444444;
   font-size: 16px;
   line-height: 19px;
+  min-width: 1160px;
 }
 .footer-settings {
   /* height: 320px; */
@@ -1995,6 +2119,33 @@ body{
 .pagination-next:active {
   background-color: #DCDCDC;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.open-cart-button-container {
+  display: flex;
+}
+.open-cart-button {
+  width: 280px;
+  line-height: 50px;
+  background-color: #FFFFFF;
+  color: #000000;
+  margin: 0 auto;
+  margin-bottom: 21px;
+}
+.open-cart-button:hover {
+  background-color: #FFE17F;
+  color: #000000;
+}
+.open-cart-button:focus {
+  outline-color: #AF4FFF;
+  outline-width: 5px;
+  outline-style: solid;
+  outline-offset: -1px;
+}
+.open-cart-button:active {
+  background-color: #FFE17F;
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 /* Скрытие */
