@@ -113,7 +113,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   fill: black;
-  z-index: 100;
+  z-index: 1;
 }
 .search-form-input {
   font-family: "Rubik", sans-serif;
@@ -1083,6 +1083,224 @@ body{
   background-image: url("../img/icons/tick-big.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Модальное окно доставки под заказ */
+
+.modal-contaier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 6;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 80px 72px;
+  background-color: #FFFFFF;
+  border: 10px solid #000000;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 58px;
+}
+.modal-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+.close-modal-button {
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  background-color: #FFFFFF;
+  border: none;
+  background-image: url("../img/icons/big-cross-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+.close-modal-button:hover {
+  opacity: 0.6;
+}
+.close-modal-button:focus {
+  outline: none;
+}
+.close-modal-button:focus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #AF4FFF;
+}
+.close-modal-button:active {
+  opacity: 0.3;
+}
+
+.delivery-on-order-modal {
+  width: 920px;
+  box-sizing: border-box;
+}
+
+.order-form {
+  display: grid;
+  grid-template-columns: 360px 160px 160px;
+  column-gap: 40px;
+  row-gap: 10px;
+}
+.order-form-label {
+  font-family: "Rubik", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.order-form-label-title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.order-form-label-note {
+  font-family: inherit;
+  color: inherit;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.order-form-name .order-form-label-note {
+  color: #FF3D3D;
+}
+
+.order-form-field {
+  font-family: inherit;
+  font-size: inherit;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 24px;
+  border: none;
+  background-color: #F0F0F0;
+}
+.order-form-field::placeholder {
+  opacity: 0.6;
+}
+.order-form-field:hover {
+  background-color: #EBEBEB;
+}
+.order-form-field:focus {
+  outline-color: #AF4FFF;
+  outline-style: solid;
+  outline-width: 5px;
+}
+.order-form-field:active {
+  outline-color: #000000;
+  outline-style: solid;
+  outline-width: 3px;
+}
+.order-form-field:invalid {
+  outline-color: #FF3D3D;
+  outline-style: solid;
+  outline-width: 3px;
+}
+.order-form-email {
+  grid-column: 2 / -1;
+}
+.order-form-order {
+  grid-column: 1 / 3;
+}
+.order-form-name .order-form-field,
+.order-form-email .order-form-field{
+  padding-right: 44px;
+}
+.order-form-order-cnt .order-form-field {
+  padding: 0;
+  text-align: center;
+}
+.order-form-order-cnt .order-form-field::-webkit-outer-spin-button,
+.order-form-order-cnt .order-form-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.order-form-label-icon {
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  fill: #B3B3B3;
+}
+.change-cnt-button-container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 45px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.change-cnt-button {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.change-cnt-button:hover .change-cnt-button-icon{
+  opacity: 1;
+}
+.change-cnt-button:focus {
+  outline: none;
+}
+.change-cnt-button:focus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #AF4FFF;
+  box-sizing: border-box;
+}
+.change-cnt-button:active .change-cnt-button-icon{
+  opacity: 0.1;
+}
+.change-cnt-button:active::after {
+  border: none;
+}
+.change-cnt-button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+.order-form-sent-button {
+  width: 200px;
 }
 
 
@@ -2146,6 +2364,34 @@ body{
   background-color: #FFE17F;
   color: rgba(0, 0, 0, 0.3);
   outline: none;
+}
+.order-form-sent-button {
+  width: 200px;
+  line-height: 50px;
+  z-index: 0;
+}
+.order-form-sent-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FFC700;
+  z-index: -1;
+}
+.order-form-sent-button:hover {
+  background-color: #FFC700;
+}
+.order-form-sent-button:focus::after {
+  background-color: #AF4FFF;
+}
+.order-form-sent-button:active {
+  color: rgba(0, 0, 0, 0.3) ;
+}
+.order-form-sent-button:active::after {
+  background-color: transparent;
 }
 
 /* Скрытие */

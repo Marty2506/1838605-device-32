@@ -509,5 +509,61 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-contaier">
+      <div class="modal delivery-on-order-modal">
+        <header class="modal-header">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <button class="close-modal-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </header>
+        <div class="modal-content">
+          <form class="order-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="order-form-label order-form-name">
+                <span class="order-form-label-title">Ваше имя:</span>
+                <!-- Нужно ли делать поле обязательным? -->
+                <input class="order-form-field" type="text" id="customer-name" name="customer-name" placeholder="Имя Фамилия">
+                <svg class="order-form-label-icon" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 12H13C12.8 9.4 10.9 7.2 8.3 6.5C9.3 5.9 10 4.8 10 3.5C10 1.6 8.4 0 6.5 0C4.6 0 3 1.6 3 3.5C3 4.8 3.7 5.9 4.7 6.5C2.1 7.2 0.2 9.4 0 12Z"/>
+                </svg>
+                <span class="order-form-label-note">Пожалуйста, представьтесь</span>
+              </label>
+              <label class="order-form-label order-form-email">
+                <span class="order-form-label-title">Ваш e-mail:</span>
+                <input class="order-form-field" type="email" id="customer-email" name="customer-email" placeholder="Введите e-mail" value="krasotka92@mail.ru">
+                <svg class="order-form-label-icon" width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.6 8C7.2 8 7 7.9 6.6 7.7L0 4V11C0 11.6 0.4 12 0.9 12H14.1C14.7 12 15 11.6 15 11V4L8.5 7.7C8.1 7.9 7.9 8 7.6 8ZM14.1 0H0.9C0.4 0 0 0.5 0 1V1.8L7.5 6L15 1.8V1C15 0.5 14.6 0 14.1 0Z"/>
+                </svg>
+                <span class="order-form-label-note">Забавный у вас адрес</span>
+              </label>
+              <label class="order-form-label order-form-order">
+                <span class="order-form-label-title">Что нужно привезти:</span>
+                <input class="order-form-field" type="text" id="customer-order" name="customer-order" placeholder="В свободной форме">
+              </label>
+              <label class="order-form-label order-form-order-cnt">
+                <span class="order-form-label-title">Количество:</span>
+                <input class="order-form-field" type="number" id="customer-order-cnt" name="customer-order-cnt" value="1" min="1" max="999">
+                <div class="change-cnt-button-container">
+                  <button class="change-cnt-button change-cnt-minus" type="button">
+                    <svg class="change-cnt-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 7H0V9H16V7Z" fill="black"/>
+                    </svg>
+                    <span class="visually-hidden">Уменьшить</span>
+                  </button>
+                  <button class="change-cnt-button change-cnt-plus" type="button">
+                    <svg class="change-cnt-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                    </svg>
+                    <span class="visually-hidden">Увеличить</span>
+                  </button>
+                </div>
+              </label>
+              <button class="button order-form-sent-button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
