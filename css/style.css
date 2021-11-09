@@ -378,6 +378,9 @@ body{
   flex-direction: column;
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
+.popover-cart-close {
+  display: none;
+}
 /* Такой способ плохо работает)) */
 /* .toolbar-link:hover + .popover-cart {
   display: flex;
@@ -470,6 +473,81 @@ body{
   padding: 0px 20px;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+/* Подкаталог */
+.page-header-subcatalog {
+  width: 1160px;
+  padding: 33px 60px;
+  box-sizing: border-box;
+  background-color: #FFE17F;
+  z-index: 4;
+  position: absolute;
+  top: 36px;
+  left: -60px;
+}
+.subcatalog-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content;
+  row-gap: 18px;
+  column-gap: 50px;
+}
+.subcatalog-item:nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.subcatalog-item:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.subcatalog-item:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.subcatalog-item:nth-child(5) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.subcatalog-item:nth-child(6) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.subcatalog-link {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  word-wrap: break-word;
+  position: relative;
+}
+.subcatalog-link:hover {
+  opacity: 0.6;
+}
+.subcatalog-link:focus {
+  outline: none;
+}
+.subcatalog-link:focus::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -10px;
+  right: -10px;
+  border-radius: 25px;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: #AF4FFF;
+}
+.subcatalog-link:active {
+  opacity: 0.3;
+}
+.subcatalog-link:active::after {
+  outline: none;
 }
 
 
@@ -1097,6 +1175,9 @@ body{
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 6;
 }
+.modal-container-close {
+  display: none;
+}
 .modal {
   position: relative;
   margin: auto;
@@ -1301,6 +1382,49 @@ body{
 }
 .order-form-sent-button {
   width: 200px;
+}
+.order-form-order-cnt {
+  position: relative;
+}
+.order-form-cnt-info-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #FFE17F;
+  background-image: url("../img/icons/info.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -3px;
+  right: 15px;
+}
+.order-form-cnt-info {
+  width: 200px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 19px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: none;
+  position: absolute;
+  transform: translate(-20px, 3px);
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.order-form-cnt-info::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 6px;
+  top: 0px;
+  right: 0px;
+  transform: translate(-41px, -100%);
+  background-image: url("../img/icons/triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.order-form-cnt-info-icon:hover + .order-form-cnt-info {
+  display: flex;
 }
 
 

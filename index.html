@@ -50,7 +50,7 @@
                     <span class="toolbar-bucket-product-cnt">2</span>
                     <span class="toolbar-link-text">Корзина</span>
                   </a>
-                  <div class="popover-cart">
+                  <div class="popover-cart popover-cart-close">
                     <div class="popover-cart-content">
                       <h2 class="visually-hidden">Корзина</h2>
                       <ul class="popover-cart-list">
@@ -96,6 +96,28 @@
             <div class="page-header-left-column-container">
               <div class="page-header-catalog-container">
                 <a class="page-header-catalog-link" href="catalog.html">Каталог товаров</a>
+                <div class="page-header-subcatalog">
+                  <ul class="subcatalog-list">
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Моноподы для селфи</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Экшн-камеры</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Умные часы</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="page-header-right-column-container">
@@ -510,7 +532,7 @@
       </div>
     </footer>
 
-    <div class="modal-contaier">
+    <div class="modal-contaier modal-container-close">
       <div class="modal delivery-on-order-modal">
         <header class="modal-header">
           <h2 class="modal-title">Доставка под заказ</h2>
@@ -543,6 +565,13 @@
               </label>
               <label class="order-form-label order-form-order-cnt">
                 <span class="order-form-label-title">Количество:</span>
+                <div class="order-form-cnt-info-container">
+                  <span class="visually-hidden">Уточнение</span>
+                  <span class="order-form-cnt-info-icon"></span>
+                  <p class="order-form-cnt-info">
+                    Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
+                  </p>
+                </div>
                 <input class="order-form-field" type="number" id="customer-order-cnt" name="customer-order-cnt" value="1" min="1" max="999">
                 <div class="change-cnt-button-container">
                   <button class="change-cnt-button change-cnt-minus" type="button">
