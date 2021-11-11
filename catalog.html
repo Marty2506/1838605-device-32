@@ -20,12 +20,9 @@
                 <label class="search-form-label" for="search">
                   <span class="visually-hidden">Поиск</span>
                 </label>
-                <!-- Нет текста -->
+                <!-- Если есть текст, то инпуту добаувляется класс search-form-not-empty, а у кнопки убирается класс not-displayed-->
                 <input class="search-form-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
                 <button class="not-displayed search-form-button" type="submit">Найти</button>
-                <!-- Есть текст -->
-                <!-- <input class="search-form-input search-form-not-empty" type="search" name="search" id="search" placeholder="Поиск по сайту">
-                <button class="search-form-button" type="submit">Найти</button> -->
               </form>
             </div>
             <div class="page-header-right-column-container">
@@ -94,7 +91,7 @@
           </div>
           <div class="page-header-row-container">
             <div class="page-header-left-column-container">
-              <div class="page-header-catalog-container">
+              <div class="page-header-catalog-container" tabindex="-1">
                 <a class="page-header-catalog-link" href="catalog.html">Каталог товаров</a>
                 <div class="page-header-subcatalog">
                   <ul class="subcatalog-list">

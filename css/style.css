@@ -39,8 +39,7 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
-
+  min-width: 1160px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -74,7 +73,7 @@ body{
   display: flex;
 }
 .page-header-row-container:not(:last-of-type) {
-  margin-bottom: 44px;
+  margin-bottom: 29px;
 }
 .page-header-left-column-container {
   width: 540px;
@@ -90,11 +89,27 @@ body{
 }
 
 .page-header-logo {
-  display: flex;
+  display: inline-block;
   margin: 0;
   margin-right: auto;
   margin-bottom: 35px;
   margin-top: -23px;
+}
+.page-header-logo:focus {
+  outline: none;
+  position: relative;
+}
+.page-header-logo:focus::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -10px;
+  right: -10px;
+  border-radius: 25px;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #AF4FFF;
 }
 .search-form {
   width: 516px;
@@ -210,6 +225,7 @@ body{
   display: flex;
   word-wrap: break-word;
   position: relative;
+  padding: 10px 0px;
   padding-left: 23px;
   align-items: center;
 }
@@ -244,11 +260,10 @@ body{
 .toolbar-link:focus-visible::after {
   content: "";
   position: absolute;
+  top: 0px;
+  bottom: 0px;
   left: -12px;
   right: -12px;
-  height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
   border-radius: 20px;
   outline-color: #AF4FFF;
   outline-style: solid;
@@ -305,13 +320,14 @@ body{
   display: block;
   position: relative;
   z-index: 2;
+  padding: 15px 0px;
 }
 .page-header-catalog-link::after{
   content: "";
   position: absolute;
-  right: -70px;
+  left: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(20px, -50%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -346,8 +362,8 @@ body{
 .page-header-catalog-link:focus-visible::before {
   content: "";
   position: absolute;
-  top: -15px;
-  bottom: -15px;
+  top: 0px;
+  bottom: 0px;
   left: -20px;
   right: -20px;
   border-radius: 25px;
@@ -373,18 +389,14 @@ body{
   position: absolute;
   z-index: 5;
   left: 0;
-  transform: translate(-48%, 12px);
-  display: flex;
+  transform: translate(-48%, 0px);
+  display: none;
   flex-direction: column;
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.popover-cart-close {
-  display: none;
-}
-/* Такой способ плохо работает)) */
-/* .toolbar-link:hover + .popover-cart {
+.page-header-toolbar-item:hover .popover-cart {
   display: flex;
-} */
+}
 .popover-cart::before {
   content: "";
   width: 14px;
@@ -485,6 +497,22 @@ body{
   position: absolute;
   top: 36px;
   left: -60px;
+  display: none;
+}
+.page-header-catalog-container:hover .page-header-catalog-link,
+.page-header-catalog-container:focus-within .page-header-catalog-link  {
+  z-index: 5;
+}
+.page-header-catalog-container:hover .page-header-catalog-link::after,
+.page-header-catalog-container:focus-within .page-header-catalog-link::after{
+  background-image: url("../img/icons/minus.svg");
+  opacity: 1;
+}
+.page-header-catalog-container:hover .page-header-subcatalog {
+  display: block;
+}
+.page-header-catalog-container:focus-within .page-header-subcatalog {
+  display: block;
 }
 .subcatalog-list {
   margin: 0;
@@ -837,7 +865,6 @@ body{
   margin-bottom: 90px;
   padding-top: 70px;
   position: relative;
-  min-width: 1160px;
 }
 .services-container::after {
   content: "";
@@ -1082,7 +1109,6 @@ body{
   background-color: #F0F0F0;
   padding-top: 75px;
   padding-bottom: 130px;
-  min-width: 1160px;
 }
 .subscribe-section {
   display: grid;
@@ -1169,14 +1195,14 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 6;
 }
-.modal-container-close {
-  display: none;
+.modal-container-open {
+  display: flex;
 }
 .modal {
   position: relative;
@@ -1430,7 +1456,6 @@ body{
 
 /* Страница каталога */
 .main-inner {
-  min-width: 1160px;
 }
 .inner-page-left-padding {
   padding-left: 60px;
@@ -2018,7 +2043,6 @@ body{
   background-color: #444444;
   font-size: 16px;
   line-height: 19px;
-  min-width: 1160px;
 }
 .footer-settings {
   /* height: 320px; */

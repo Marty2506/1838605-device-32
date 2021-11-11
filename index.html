@@ -20,12 +20,9 @@
                 <label class="search-form-label" for="search">
                   <span class="visually-hidden">Поиск</span>
                 </label>
-                <!-- Нет текста -->
+                <!-- Если есть текст, то инпуту добаувляется класс search-form-not-empty, а у кнопки убирается класс not-displayed-->
                 <input class="search-form-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
                 <button class="not-displayed search-form-button" type="submit">Найти</button>
-                <!-- Есть текст -->
-                <!-- <input class="search-form-input search-form-not-empty" type="search" name="search" id="search" placeholder="Поиск по сайту">
-                <button class="search-form-button" type="submit">Найти</button> -->
               </form>
             </div>
             <div class="page-header-right-column-container">
@@ -50,7 +47,7 @@
                     <span class="toolbar-bucket-product-cnt">2</span>
                     <span class="toolbar-link-text">Корзина</span>
                   </a>
-                  <div class="popover-cart popover-cart-close">
+                  <div class="popover-cart">
                     <div class="popover-cart-content">
                       <h2 class="visually-hidden">Корзина</h2>
                       <ul class="popover-cart-list">
@@ -94,7 +91,7 @@
           </div>
           <div class="page-header-row-container">
             <div class="page-header-left-column-container">
-              <div class="page-header-catalog-container">
+              <div class="page-header-catalog-container" tabindex="-1">
                 <a class="page-header-catalog-link" href="catalog.html">Каталог товаров</a>
                 <div class="page-header-subcatalog">
                   <ul class="subcatalog-list">
@@ -532,7 +529,8 @@
       </div>
     </footer>
 
-    <div class="modal-contaier modal-container-close">
+    <!-- Для открытия модального окна добавляется класс modal-container-open -->
+    <div class="modal-contaier">
       <div class="modal delivery-on-order-modal">
         <header class="modal-header">
           <h2 class="modal-title">Доставка под заказ</h2>
