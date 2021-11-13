@@ -1227,7 +1227,7 @@ body{
 .modal {
   position: relative;
   margin: auto;
-  padding: 80px 72px;
+  padding: 63px 70px;
   background-color: #FFFFFF;
   border: 10px solid #000000;
 }
@@ -1235,7 +1235,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 58px;
+  margin-bottom: 67px;
 }
 .modal-title {
   font-family: "Raleway", sans-serif;
@@ -1288,7 +1288,7 @@ body{
   display: grid;
   grid-template-columns: 360px 160px 160px;
   column-gap: 40px;
-  row-gap: 10px;
+  row-gap: 14px;
 }
 .order-form-label {
   font-family: "Rubik", sans-serif;
@@ -1301,17 +1301,17 @@ body{
   position: relative;
 }
 .order-form-label-title {
-  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 10px;
+  line-height: 20px;
+  margin-bottom: 14px;
   letter-spacing: -0.02em;
 }
 .order-form-label-note {
   font-family: inherit;
   color: inherit;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 .order-form-name .order-form-label-note {
   color: #FF3D3D;
@@ -1359,12 +1359,22 @@ body{
 .order-form-email .order-form-field{
   padding-right: 44px;
 }
-.order-form-order-cnt .order-form-field {
+.order-form-order-cnt-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.order-form-order-cnt-container .order-form-field {
   padding: 0;
   text-align: center;
 }
-.order-form-order-cnt .order-form-field::-webkit-outer-spin-button,
-.order-form-order-cnt .order-form-field::-webkit-inner-spin-button {
+.order-form-order-cnt-container .order-form-field::-webkit-outer-spin-button,
+.order-form-order-cnt-container .order-form-field::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -1386,15 +1396,24 @@ body{
   box-sizing: border-box;
 }
 .change-cnt-button {
+  position: absolute;
+  bottom: 14px;
   width: 32px;
   height: 32px;
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
-  position: relative;
   cursor: pointer;
 }
+.change-cnt-minus {
+  left: 10px;
+}
+
+.change-cnt-plus {
+  right: 10px;
+}
+
 .change-cnt-button:hover .change-cnt-button-icon{
   opacity: 1;
 }
@@ -1426,9 +1445,7 @@ body{
   transform: translate(-50%, -50%);
   opacity: 0.3;
 }
-.order-form-sent-button {
-  width: 200px;
-}
+
 .order-form-order-cnt {
   position: relative;
 }
@@ -2571,9 +2588,11 @@ body{
 }
 .order-form-sent-button {
   width: 200px;
-  line-height: 50px;
+  margin-top: 26px;
   z-index: 0;
+  line-height: 50px;
 }
+
 .order-form-sent-button::after {
   content: "";
   position: absolute;
