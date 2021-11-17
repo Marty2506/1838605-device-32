@@ -1736,6 +1736,8 @@ body {
 
 .breadcrumbs-link {
   position: relative;
+  display: flex;
+  max-width: 250px;
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.6);
@@ -1789,6 +1791,7 @@ body {
 }
 
 .main-inner-subtitle {
+  max-width: 200px;
   margin-right: 33px;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
@@ -2143,6 +2146,7 @@ body {
 }
 
 .select-control {
+  max-width: 300px;
   padding: 7px 13px;
   padding-right: 45px;
   font-family: inherit;
@@ -2338,10 +2342,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 70px;
+  min-height: 70px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  overflow: auto;
 }
 
 .pagination-item {
