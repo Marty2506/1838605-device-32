@@ -302,7 +302,7 @@ body {
   opacity: 0.3;
 }
 
-.toolbar-bucket-product-cnt {
+.toolbar-bucket-product-counter {
   position: absolute;
   left: -15px;
   display: flex;
@@ -1554,7 +1554,7 @@ body {
   padding-right: 44px;
 }
 
-.order-form-order-cnt-container {
+.order-form-order-counter-container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1565,13 +1565,13 @@ body {
   line-height: 20px;
 }
 
-.order-form-order-cnt-container .order-form-field {
+.order-form-order-counter-container .order-form-field {
   padding: 0;
   text-align: center;
 }
 
-.order-form-order-cnt-container .order-form-field::-webkit-outer-spin-button,
-.order-form-order-cnt-container .order-form-field::-webkit-inner-spin-button {
+.order-form-order-counter-container .order-form-field::-webkit-outer-spin-button,
+.order-form-order-counter-container .order-form-field::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -1583,7 +1583,7 @@ body {
   fill: #b3b3b3;
 }
 
-.change-cnt-button-container {
+.change-counter-button-container {
   position: absolute;
   top: 45px;
   left: 0;
@@ -1595,7 +1595,7 @@ body {
   box-sizing: border-box;
 }
 
-.change-cnt-button {
+.change-counter-button {
   position: absolute;
   bottom: 14px;
   width: 32px;
@@ -1607,23 +1607,23 @@ body {
   cursor: pointer;
 }
 
-.change-cnt-minus {
+.change-counter-minus {
   left: 10px;
 }
 
-.change-cnt-plus {
+.change-counter-plus {
   right: 10px;
 }
 
-.change-cnt-button:hover .change-cnt-button-icon {
+.change-counter-button:hover .change-counter-button-icon {
   opacity: 1;
 }
 
-.change-cnt-button:focus {
+.change-counter-button:focus {
   outline: none;
 }
 
-.change-cnt-button:focus::after {
+.change-counter-button:focus::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1636,15 +1636,15 @@ body {
   box-sizing: border-box;
 }
 
-.change-cnt-button:active .change-cnt-button-icon {
+.change-counter-button:active .change-counter-button-icon {
   opacity: 0.1;
 }
 
-.change-cnt-button:active::after {
+.change-counter-button:active::after {
   border: none;
 }
 
-.change-cnt-button-icon {
+.change-counter-button-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1652,11 +1652,11 @@ body {
   opacity: 0.3;
 }
 
-.order-form-order-cnt {
+.order-form-order-counter {
   position: relative;
 }
 
-.order-form-cnt-info-icon {
+.order-form-counter-info-icon {
   position: absolute;
   top: -3px;
   right: 15px;
@@ -1669,7 +1669,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.order-form-cnt-info {
+.order-form-counter-info {
   position: absolute;
   transform: translate(-20px, 3px);
   z-index: 1;
@@ -1683,7 +1683,7 @@ body {
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.order-form-cnt-info::before {
+.order-form-counter-info::before {
   content: "";
   position: absolute;
   width: 14px;
@@ -1696,7 +1696,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.order-form-cnt-info-icon:hover + .order-form-cnt-info {
+.order-form-counter-info-icon:hover + .order-form-counter-info {
   display: flex;
 }
 
