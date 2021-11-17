@@ -677,8 +677,8 @@ body {
 
 .pop-product-slider-cotrols {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  transform: translateY(241px);
   z-index: 4;
   display: flex;
   width: 560px;
