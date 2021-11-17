@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -269,7 +270,7 @@
             <div class="sorting-container">
               <div class="sorting-header-container">
                 <h3 class="main-inner-subtitle">Сортировка:</h3>
-                <form class="sorting-type">
+                <form class="sorting-type" method="get">
                   <label class="visually-hidden" for="sorting">Сортировка</label>
                   <select class="select-control" id="sorting" name="sorting">
                     <option value="popular">Сначала популярные</option>
@@ -331,7 +332,6 @@
               </ul>
               <div class="pagination-and-button-container">
                 <a class="button pagination-show-more" href="#">Загрузить ещё</a>
-                <!-- <button class="button pagination-show-more" type="button">Загрузить ещё</button> -->
                 <!-- В макете цыфры пагинации стоят не по серединке. Я могу конечно прописать неавтоматические марджины и выравнить как там, но так не оень красиво -->
                 <div class="pagination-container">
                   <ul class="pagination-list">
