@@ -2316,7 +2316,7 @@ body {
 
 .pagination-and-button-container {
   padding-left: 70px;
-  margin-bottom: 79px;
+  margin-bottom: 77px;
 }
 
 .pagination-container {
@@ -2859,10 +2859,10 @@ body {
 
 .pagination-show-more {
   width: 760px;
-  height: 55px;
   font-size: 16px;
   font-weight: 800;
   line-height: 19px;
+  padding: 16px 0;
   box-sizing: border-box;
   border: 3px solid rgba(0, 0, 0, 0.1);
   background-color: inherit;
