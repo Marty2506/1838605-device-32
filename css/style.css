@@ -810,7 +810,7 @@ body {
   max-width: 280px;
 }
 
-.pop-product-feature-item-container:not(:nth-last-child()) {
+.pop-product-feature-item-container:not(:last-of-type) {
   margin-right: 10px;
 }
 
@@ -1263,6 +1263,14 @@ body {
 
 .contacts-phone {
   color: inherit;
+}
+
+.contacts-phone:hover {
+  opacity: 0.6;
+}
+
+.contacts-phone:active {
+  opacity: 0.3;
 }
 
 .contacts-schedule {
@@ -2474,7 +2482,7 @@ body {
   left: -10px;
   right: -10px;
   border-radius: 25px;
-  outline-color: #424242;
+  outline-color: #af4fff;
   outline-style: solid;
   outline-width: 2px;
 }
@@ -2637,8 +2645,8 @@ body {
 
 .about-contacts-button {
   min-width: 260px;
-  min-height: 40px;
-  line-height: 40px;
+  padding: 8.5px 0;
+  padding-left: 5px;
 }
 
 .about-contacts-button::after {
@@ -2667,8 +2675,8 @@ body {
 
 .pop-slider-about-button {
   min-width: 220px;
-  min-height: 50px;
-  line-height: 50px;
+  padding: 14px 0;
+  padding-left: 5px;
 }
 
 .pop-slider-about-button::after {
@@ -2700,7 +2708,6 @@ body {
   min-width: 160px;
   max-width: 276px;
   min-height: 40px;
-  line-height: 40px;
 }
 
 .service-button::after {
@@ -2887,7 +2894,7 @@ body {
 .pagination-prev,
 .pagination-next {
   width: 133px;
-  line-height: 70px;
+  padding: 24.5px 0;
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
@@ -2922,7 +2929,8 @@ body {
   width: 280px;
   margin: 0 auto;
   margin-bottom: 21px;
-  line-height: 50px;
+  padding: 14px 0;
+  padding-left: 5px;
   background-color: #ffffff;
   color: #000000;
 }
