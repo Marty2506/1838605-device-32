@@ -755,7 +755,7 @@ body {
   font-weight: 400;
 }
 
-.pop-product-item::after {
+.pop-product-slide-number {
   position: absolute;
   right: 48px;
   top: 45px;
@@ -765,8 +765,6 @@ body {
   line-height: 105px;
   color: #ffffff;
   text-align: right;
-  counter-increment: pop-product-cnt;
-  content: "0" counter(pop-product-cnt) " ";
 }
 
 .pop-product-item-content-container {
