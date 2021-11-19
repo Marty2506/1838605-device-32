@@ -1511,16 +1511,22 @@ body {
 }
 
 .order-form-field {
-  height: 60px;
+  min-height: 60px;
   margin: 0;
-  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 24px;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
   line-height: 20px;
   border: none;
   background-color: #f0f0f0;
+}
+
+.order-form-order .order-form-field {
+  resize: vertical;
 }
 
 .order-form-field::placeholder {
@@ -1574,7 +1580,8 @@ body {
 }
 
 .order-form-order-counter-container .order-form-field {
-  padding: 0;
+  padding-left: 40px;
+  padding-right: 40px;
   text-align: center;
 }
 
@@ -1586,26 +1593,14 @@ body {
 
 .order-form-label-icon {
   position: absolute;
-  top: 55px;
-  right: 15px;
+  top: 58px;
+  right: 20px;
   fill: #b3b3b3;
-}
-
-.change-counter-button-container {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  display: flex;
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  justify-content: space-between;
-  box-sizing: border-box;
 }
 
 .change-counter-button {
   position: absolute;
-  bottom: 14px;
+  top: 48px;
   width: 32px;
   height: 32px;
   margin: 0;
