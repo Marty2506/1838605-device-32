@@ -1708,7 +1708,7 @@ body {
 .main-inner-title {
   margin: 0;
   margin-top: 38px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .inner-page-left-padding {
@@ -1718,7 +1718,7 @@ body {
 .breadcrumbs-list {
   display: flex;
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   padding: 0;
   list-style-type: none;
 }
